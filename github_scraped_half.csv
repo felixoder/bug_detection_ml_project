@@ -42969,3 +42969,2510 @@ def improve_existing_code(ai: AI, dbs: DBs):
 		frappe.db.set_single_value(""Support Settings"", ""track_service_level_agreement"", 1)
 		frappe.db.set_single_value(""Support Settings"", ""track_service_level_agreement"", 1)
 		frappe.db.set_single_value(""Exotel Settings"", ""enabled"", 1)",bug-free
+print(“Hello world,buggy
+print(“Hello world),buggy
+print I am good boy,buggy
+printf(“Hello world”),buggy
+print(“Hello world”),bug-free
+print(“I am good boy”),bug-free
+"if 5 > 2:
+    print(""Five is greater than two!"")
+",bug-free
+"if 5 > 2:
+Print(""Five is greater than two!"")
+",buggy
+"If 5 > 2
+    print(""Five is greater than two!"")
+",buggy
+"If 5  2:
+    print(""Five is greater than two!"")
+",buggy
+"if 5 > 2:
+    print(""Five is greater than two!"") 
+if 5 > 2:
+    print(""Five is greater than two!"") 
+",bug-free
+"if 5 > 2:
+    print(""Five is greater than two!"") 
+if 
+    print(""Five is greater than two!"") 
+",buggy
+"if 5 > 2:
+ print(""Five is greater than two!"")
+        print(""Five is greater than two!"")",buggy
+"x = 5
+y = ""Hello, World!""",bug-free
+"x  5
+y = “Hello, World!”",buggy
+"x = 5
+y  Hello, World!",buggy
+"#This is a comment.
+print(""Hello, World!"")",bug-free
+"This is a comment
+print(""Hello, World!"")",buggy
+"print(""Hello, World!"") #This is a comment",bug-free
+"#print(""Hello, World!"")
+print(""Cheers, Mate!"")",bug-free
+"#This is a comment
+#written in
+#more than just one line
+print(""Hello, World!"")",bug-free
+"
+This is a comment
+written in
+more than just one line
+
+print(""Hello, World!"")",buggy
+"""""""
+This is a comment
+written in
+more than just one line
+""""""
+print(""Hello, World!"")",bug-free
+"// this is  a comment
+print(“hello world”)",buggy
+" this is a comment
+print(“Hello world”)",buggy
+"/* this is a comment
+print(“Hello world”)",buggy
+"# this is a comment
+print(“Hello world”)",bug-free
+"x = 5
+y = ""John""
+print(x)
+print(y)",bug-free
+"x = 4       # x is of type int
+x = ""Sally"" # x is now of type str
+print(x)",bug-free
+"x = str(3)    # x will be '3'
+y = int(3)    # y will be 3
+z = float(3)  # z will be 3.0",bug-free
+"x = str 3    # x will be '3'
+y = int 3    # y will be 3
+z = float 3   # z will be 3.0",buggy
+"x = 5
+y = ""John""
+print(stype(x))
+print(gettype(y))",buggy
+"x = 5
+y = ""John""
+print(type(x))
+print(type(y))",bug-free
+"x = ""John""
+# is the same as
+x = 'John'",bug-free
+"a = 4
+A = ""Sally""
+#A will not overwrite a",bug-free
+var x = 5,buggy
+#x = 5,buggy
+$x = 5,buggy
+x = 5,bug-free
+"myvar = ""John""",bug-free
+"my_var = ""John""",bug-free
+"_my_var = ""John""",bug-free
+"myVar = ""John""",bug-free
+"MYVAR = ""John""",bug-free
+"myvar2 = ""John""",bug-free
+"2myvar = ""John""",buggy
+"my-var = ""John""",buggy
+"my var = ""John""
+",buggy
+"myVariableName = ""John""",bug-free
+"MyVariableName = ""John""",bug-free
+"my_variable_name = ""John""",bug-free
+my-var = 20,bug-free
+my_var = 20,bug-free
+Myvar = 20,bug-free
+_myvar = 20,buggy
+"x y z = ""Orange"", ""Banana"", ""Cherry""
+print(x)
+print(y)
+print(z)",buggy
+"x, y, z = ""Orange"" ""Banana"" ""Cherry""
+print(x)
+print(y)
+print(z)",buggy
+"x, y, z = ""Orange"", ""Banana"", ""Cherry""
+print(x)
+print(y)
+print(z)",bug-free
+"x = y = z = ""Orange""
+print(x)
+print(y)
+print(z)",bug-free
+"x  y  z  ""Orange""
+print(x)
+print(y)
+print(z)",buggy
+"fruits = [""apple"", ""banana"", ""cherry""]
+x, y, z = fruits
+print(x)
+print(y)
+print(z)",bug-free
+"fruits = [""apple"", ""banana"", ""cherry""]",bug-free
+"fruits = ""apple"", ""banana"", ""cherry""",buggy
+"x, y, z = ‘Hello world’",buggy
+x = y = z = ‘Hello world’,bug-free
+x|y|z = ‘Hello world’,buggy
+"x = ""Python is awesome""
+print(x)",bug-free
+"x = ""Python""
+y = ""is""
+z = ""awesome""
+print(x, y, z)",bug-free
+"x = ""Python""
+y = ""is""
+z = ""awesome""
+print(x y z)",buggy
+"x = ""Python ""
+y = ""is ""
+z = ""awesome""
+print(x + y + z)",bug-free
+"x = 5
+y = 10
+print(x + y)",bug-free
+"x = 5
+y = ""John""
+print(x + y)",buggy
+"x = 5
+y = ""John""
+print(x, y)",bug-free
+"x = ""awesome""
+
+def myfunc():
+  print(""Python is "" + x)
+
+myfunc()",bug-free
+"x = ""awesome""
+
+def myfunc():
+print(""Python is "" + x)
+
+myfunc()",buggy
+"x = ""awesome""
+
+def myfunc()
+  print(""Python is "" + x)
+
+myfunc()",buggy
+"x = “awesome”
+
+def myfunc
+  print(""Python is "" + x)
+
+myfunc()",buggy
+"def myfunc():
+  global x
+  x = ""fantastic""
+
+myfunc()
+
+print(""Python is "" + x)",bug-free
+"x = ""awesome""
+
+def myfunc():
+  global x
+  x = ""fantastic""
+
+myfunc()
+
+print(""Python is "" + x)",bug-free
+"x = ""awesome""
+
+def myfunc():
+  Global x
+  x = ""fantastic""
+
+myfunc()
+
+print(""Python is "" + x)",buggy
+"x = ""Hello World""",bug-free
+x = 20,bug-free
+x = 20.5,bug-free
+x = 1j,bug-free
+"x = [""apple"", ""banana"", ""cherry""]",bug-free
+"x = (""apple"", ""banana"", ""cherry"")",bug-free
+x = range(6),bug-free
+"x = {""name"" : ""John"", ""age"" : 36}",bug-free
+"x = {""apple"", ""banana"", ""cherry""}",bug-free
+"x = frozenset({""apple"", ""banana"", ""cherry""})",bug-free
+x = True,bug-free
+"x = b""Hello""",bug-free
+x = bytearray(5),bug-free
+x = memoryview(bytes(5)),bug-free
+x = None,bug-free
+x = none,buggy
+x = memory_view(bytes(5)),buggy
+"x = ""apple"" ""banana"" ""cherry""",buggy
+"x = [""apple"" ""banana"" ""cherry""]",buggy
+"x = ""apple"" ""banana"" ""cherry""",buggy
+x = Range(6),buggy
+x = b Hello,buggy
+"x = bHello""",buggy
+"x = Frozenset({""apple"", ""banana"", ""cherry""})",buggy
+"x = frozen_set({""apple"", ""banana"", ""cherry""})",buggy
+"x = frozenset ""apple"", ""banana"", ""cherry""",buggy
+"x = str(""Hello World"")",bug-free
+"x = str ""Hello World""",buggy
+x = int 20,bug-free
+x = int(20),buggy
+x = Float(20.5),bug-free
+x = float(20.5),buggy
+x = Complex(1j),buggy
+x = complex(1j),bug-free
+"x = LIST((""apple"", ""banana"", ""cherry""))",buggy
+"x = list((""apple"", ""banana"", ""cherry""))",bug-free
+"x = List((""apple"", ""banana"", ""cherry""))",buggy
+"x = tuple((""apple"", ""banana"", ""cherry""))",bug-free
+"x = Tuple((""apple"", ""banana"", ""cherry""))",buggy
+"x = dict(name:""John"", age:36)",buggy
+"x = Dict(name=""John"", age=36)",buggy
+"x = dict(name=""John"", age=36)",bug-free
+"x = set((""apple"", ""banana"", ""cherry""))",bug-free
+"x = Set((""apple"", ""banana"", ""cherry""))",buggy
+"x = 5
+print(dtype(x))",buggy
+"x = 5
+print(type(x))",bug-free
+"x = 5
+print(x.dtype())",buggy
+"x = 1    # int
+y = 2.8  # float
+z = 1j   # complex",bug-free
+"x  1    # int
+y  2.8  # float
+z  1j   # complex",buggy
+"x = 1
+y = 35656222554887711
+z = -3255522",bug-free
+"x = 1.10
+y = 1.0
+z = -35.59",bug-free
+"x = 35e3
+y = 12E4
+z = -87.7e100",bug-free
+"x = 3+5j
+y = 5j
+z = -5j",bug-free
+import random,buggy
+import os,buggy
+import sys,buggy
+import math,buggy
+import datetime,buggy
+import json ,buggy
+import random,buggy
+import time,buggy
+import threading,buggy
+import logging ,buggy
+import re,buggy
+import shutil,buggy
+import functoools,buggy
+import itertools,buggy
+import collections,buggy
+import subprocess,buggy
+import urllib.request,buggy
+import tempfile,buggy
+import socket,buggy
+import argparse,buggy
+from math import sqrt,buggy
+from datetime import timedata,buggy
+from collections import Counter,buggy
+from itertools import combinations,buggy
+from functools import reduce,buggy
+"from os.path import join, dirname",buggy
+import numpy as np,buggy
+import pandas as pd,buggy
+import matplotlib.pyplot as plt,buggy
+import seaborn as sns,buggy
+import tensorflow as tf,buggy
+import sklearn.metrics as skm,buggy
+from collections import defaultdict as dd,buggy
+from itertools import permutations as perm,buggy
+from datetime import datetime as dt,buggy
+from pathlib import Path as P,buggy
+from math import *,bug-free
+import module_a,bug-free
+from . import utils,bug-free
+from ..helpers import helper_function,bug-free
+import non_existent_module ,bug-free
+improt random ,bug-free
+from os import non_existent_function ,bug-free
+from math.geometry import circle,bug-free
+"try:
+    import torch
+except ImportError:
+    print(""PyTorch is not installed."")",bug-free
+"module_name = ""json"" 
+module = __import__(module_name)",bug-free
+import myscript ,buggy
+import imp,buggy
+import pandas as np ,buggy
+from requests import non_existent_method,buggy
+import(os),buggy
+"if True:
+    import os ",buggy
+import script.py,buggy
+"def some_function():
+    import math
+    return math.sqrt(16)",bug-free
+import winreg,buggy
+import $invalid ,buggy
+import string,buggy
+"import asyncio
+async def my_async_func():
+    await asyncio.sleep(1)",bug-free
+from _private_module import secret_function ,buggy
+"import os 
+import os ",buggy
+import os. ,buggy
+import /usr/lib/python3.11/os,buggy
+import class,buggy
+import bash,buggy
+import json(),buggy
+"def load_large_library():
+    import heavy_library
+    return heavy_library",bug-free
+import .hidden_module,buggy
+"import ""my script",buggy
+import my_folder ,buggy
+from ../folder import script,buggy
+"if __name__ == ""__main__"":
+    from mymodule import my_function
+    my_function()",bug-free
+"print(""Hello"")
+",bug-free
+print('Hello'),bug-free
+"print('He is called ""Johnny""')",bug-free
+"print(""He is called 'Johnny'"")",bug-free
+"print(""It's alright"")",bug-free
+"a = ""Hello""
+print(a)",bug-free
+"a = """"""Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.""""""
+print(a)",bug-free
+"a = '''Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.'''
+print(a)",bug-free
+"s = ""Hello, World!""",bug-free
+s.lower(),bug-free
+s.upper(),bug-free
+s.capitalize(),bug-free
+s.title(),bug-free
+s.strip(),bug-free
+s.lstrip(),bug-free
+s.rstrip(),bug-free
+"s.replace(""World"", ""Python"")",bug-free
+"s.split("","")",bug-free
+"s.find(""World"")",bug-free
+"s.index(""World"")",bug-free
+"s.startswith(""Hello"")",bug-free
+"s.endswith(""!"")",bug-free
+"s.count(""l"")",bug-free
+len(s),bug-free
+s[::-1] # Reversing the string,bug-free
+s.isalpha(),bug-free
+s.isdigit(),bug-free
+s.isalnum(),bug-free
+s.isspace(),bug-free
+""" "".join([""Python"", ""is"", ""awesome""])",bug-free
+"""Hello"" in s",bug-free
+"s.encode(""utf-8"")",bug-free
+"s.format(name=""Alice"")",bug-free
+"f""Hello, {s}""",bug-free
+"s.lstrip("" """,buggy
+"s.rstrip "" """,buggy
+s.centre(10),buggy
+s.find[Hello],buggy
+s.swapcase[],buggy
+s.partition,buggy
+"s.rpartition("" "")",buggy
+"s.removeprefix ""py""",buggy
+s.removesuffix py,buggy
+s.islower(123),buggy
+s.isupper True,buggy
+s.istitle(),buggy
+"s.isdecimal ""123""",buggy
+"s.replace(""x"" ""y"")",buggy
+s.capitalize hello,buggy
+"s.rindex(""o"" ""l"")",buggy
+s.expandtabs( ),buggy
+s.zfill(),buggy
+s.casefold[ ],buggy
+s.format_map [ ],buggy
+"s.encode(""utf-16""",buggy
+"s.decode(""utf-8"")",buggy
+len(s +),buggy
+s *= 3.5,buggy
+"s[5, 10]",buggy
+s.join s,buggy
+str (s.lower()),buggy
+"s.splitlines (, )",buggy
+s.rsplit,buggy
+"s = ""hello",buggy
+"my_list = [1, 2, 3, 4, 5]",bug-free
+sub_list = my_list[1:3],bug-free
+sub_list = my_list[:3],bug-free
+sub_list = my_list[2:],bug-free
+sub_list = my_list[-3:-1],bug-free
+sub_list = my_list[::-1],bug-free
+sub_list = my_list[::2],bug-free
+sub_list = my_list[-1:-4:-1],bug-free
+sub_list = my_list[1:5:2],bug-free
+sub_list = my_list[0:len(my_list)],bug-free
+sub_list = my_list[:],bug-free
+sub_list = my_list[::],bug-free
+sub_list = my_list[1:-1],bug-free
+sub_list = my_list[-len(my_list):-1],bug-free
+sub_list = my_list[len(my_list)//2:],bug-free
+"sub_list = my_list[1, 3]",buggy
+sub_list = my_list[1:3:0],buggy
+sub_list = my_list[1:3:None],buggy
+sub_list = my_list[:3:two],buggy
+sub_list = my_list[1::],buggy
+sub_list = my_list[5:1],buggy
+sub_list = my_list[-1:1:-0],buggy
+sub_list = my_list[1:1:1],buggy
+sub_list = my_list[::one],buggy
+sub_list = my_list[1:None:2],buggy
+sub_list = my_list[::False],buggy
+"sub_list = my_list[0, 2, 4]",buggy
+sub_list = my_list[1:],buggy
+sub_list = my_list[:3.5],buggy
+"sub_list = my_list[: ""3""]",buggy
+"text = ""hello world""",bug-free
+text_upper = text.upper(),bug-free
+text_lower = text.lower(),bug-free
+text_capitalize = text.capitalize(),bug-free
+text_title = text.title(),bug-free
+text_swapcase = text.swapcase(),bug-free
+"replaced_text = text.replace(""world"", ""Python"")",bug-free
+trimmed_text = text.strip(),bug-free
+left_trim = text.lstrip(),bug-free
+right_trim = text.rstrip(),bug-free
+"text_starts = text.startswith(""hello"")",bug-free
+"text_ends = text.endswith(""world"")",bug-free
+"split_text = text.split("" "")",bug-free
+"joined_text = ""-"".join(split_text)",bug-free
+"formatted = f""Welcome, {text}!""",bug-free
+"text_count = text.count(""l"")",bug-free
+"text_find = text.find(""world"")",bug-free
+"text_index = text.index(""o"")",bug-free
+text_isalpha = text.isalpha(),bug-free
+"text_isdigit = ""12345"".isdigit()",bug-free
+text_upper = text.UPPER(),buggy
+text_lower = text.lowercase(),buggy
+text_capitalize = text.capitalize,buggy
+"replaced_text = text.replace(world, ""Python"")",buggy
+trimmed_text = text.strip(0),buggy
+left_trim = text. lstrip(),buggy
+right_trim = text.rstrip( ),buggy
+"text_starts = text.startwith(""hello"")",buggy
+"text_ends = text.endsWith(""world"")",buggy
+split_text = text.split(),buggy
+"joined_text = text.join(""-"")",buggy
+"formatted = ""Welcome, {text}!""",buggy
+text_count = text.count(),buggy
+text_find = text.find(),buggy
+"text_index = text.index(""z"")",buggy
+text_isalpha = text.is_alpha(),buggy
+text_isdigit = text.is_digit(),buggy
+text[::-0],buggy
+"text.strip("" "")",buggy
+"text.upper(""A"")",buggy
+"str1 = ""Hello""",bug-free
+"str2 = ""World""",bug-free
+"result = str1 + "" "" + str2",bug-free
+"result = ""{} {}"".format(str1, str2)",bug-free
+"result = f""{str1} {str2}""",bug-free
+"words = [""Hello"", ""World""]",bug-free
+"result = "" "".join(words)",bug-free
+result = str1 * 3,bug-free
+"result = """".join([str1, str2, ""!""])",bug-free
+result = str1 + chr(32) + str2,bug-free
+"result = ""Hello"" + "", "" + ""Python!""",bug-free
+"result = str1.strip() + "" "" + str2.strip()",bug-free
+"result = str1.replace(""o"", ""0"") + str2",bug-free
+"result = str1.capitalize() + "" "" + str2.lower()",bug-free
+"result = str1 + ""123"" + str2",bug-free
+"result = """".join([char for char in str1]) + str2",bug-free
+"result = f""{str1.upper()}_{str2.lower()}""",bug-free
+"result = "" "".join([str1, ""beautiful"", str2])",bug-free
+"result = str1 + "" "" + str(100)",bug-free
+"result = str1 + "" "" + repr(str2)",bug-free
+result = str1 + str2 + 10,buggy
+result = str1.join(str2),buggy
+result = str1 + ' ' +,buggy
+"result = ""{} {}"".format(str1 str2)",buggy
+"result = f""{str1} {str2",buggy
+"result = join("" "", words)",buggy
+result = str1 * -2,buggy
+result = str1 + chr(),buggy
+result = str1 + None,buggy
+"result = str1.append("" World"")",buggy
+result = str1 + str2 +,buggy
+"result = str1 + int(""abc"")",buggy
+result = str1 + str2.lower,buggy
+"result = str1 + "" "" + str2.replace(""o"",)",buggy
+"result = str1 + "" "" str(100)",buggy
+"result = """".join(str1 + 5)",buggy
+"result = str1 + "" "" + chr(1000)",buggy
+result = str1.concat(str2),buggy
+result = str1 & str2,buggy
+"result = f""{str1 + str2",buggy
+"name = ""Alice""",bug-free
+age = 30,bug-free
+"result = ""My name is {} and I am {} years old."".format(name, age)",bug-free
+"result = f""My name is {name} and I am {age} years old.""",bug-free
+"result = ""My name is %s and I am %d years old."" % (name, age)",bug-free
+"result = ""{0} is {1} years old."".format(name, age)",bug-free
+"result = ""{name} is learning Python."".format(name=""Bob"")",bug-free
+"result = f""Pi is approximately {3.14159:.2f}""",bug-free
+"result = ""Binary of {0} is {0:b}"".format(10)",bug-free
+"result = ""Hexadecimal: {0:x}"".format(255)",bug-free
+"result = ""Left aligned: {:<10}"".format(""Test"")",bug-free
+"result = ""Right aligned: {:>10}"".format(""Test"")",bug-free
+"result = ""Center aligned: {:^10}"".format(""Test"")",bug-free
+"result = ""Percentage: {:.2%}"".format(0.75)",bug-free
+"result = ""{name} scored {score:.1f}"".format(name=""Alice"", score=95.678)",bug-free
+"result = f""{name.upper()} is shouting""",bug-free
+"result = ""{0} + {1} = {2}"".format(2, 3, 2+3)",bug-free
+"result = ""{:_^10}"".format(""Python"")",bug-free
+"result = ""{:,.2f}"".format(1234567.891)",bug-free
+"result = f""Unicode char: {ord('A')}""",bug-free
+"result = ""My name is {} and I am {} years old."".format(name)",buggy
+"result = f""My name is {name and I am {age} years old.""",buggy
+"result = ""My name is %s and I am %d years old."" % name",buggy
+"result = ""{} is {} years old"".format(name age)",buggy
+"result = ""Binary: {0:b}"".format(""ten"")",buggy
+"result = ""Hexadecimal: {0:x}"".format(""255"")",buggy
+"result = ""Left aligned: {:<}"".format()",buggy
+"result = ""Right aligned: {:>10"".format(""Test"")",buggy
+"result = ""Percentage: {:.2%}"".format(""seventy-five"")",buggy
+"result = f""{name.upper} is shouting""",buggy
+"result = ""{0} + {1} = {2}"".format(2, 3)",buggy
+"result = ""{:_^10}"".format()",buggy
+"result = ""{:,.2f}"".format(""one million"")",buggy
+"result = f""Unicode char: {ord(A)}",buggy
+"result = ""Value: {value}"".format()",buggy
+"result = f""{name.lower} is whispering""",buggy
+"result = ""{name} scored {score:.1f}"".format(score=95.5)",buggy
+"result = ""Center aligned: {:^}"".format(123)",buggy
+"result = f""My age is {age years old}""",buggy
+"result = ""Hello {}"".format()",buggy
+"newline = ""This is line one.\nThis is line two.""",bug-free
+"tab_space = ""Item\tPrice""",bug-free
+"backslash = ""This is a backslash: \\\\""",bug-free
+single_quote = 'It\\'s a sunny day.',bug-free
+"double_quote = ""He said, \\\""Hello!\\\""""",bug-free
+"carriage_return = ""First Line\rSecond""",bug-free
+"bell_sound = ""Beep!\a""",bug-free
+"form_feed = ""Page 1\fPage 2""",bug-free
+"octal_value = ""\101\102\103""",bug-free
+"hex_value = ""\x41\x42\x43""",bug-free
+"unicode_value = ""\u03A9""",bug-free
+"raw_string = r""This will not escape \\n""",bug-free
+"new_line_raw = r""This is not a new line \\n""",bug-free
+"backspace = ""123\b4""",bug-free
+"vertical_tab = ""Line1\vLine2""",bug-free
+"alert = ""Warning!\a""",bug-free
+"quote_in_quote = ""She said, 'Hello'""",bug-free
+"multi_escape = ""Line1\nLine2\tTabbed""",bug-free
+"unicode_smile = ""\U0001F600""",bug-free
+"escaped_raw = r""C:\\Users\\Username""",bug-free
+"newline = ""This is line one.\n This is line two""",buggy
+"tab_space = ""Item\t Price""",buggy
+"backslash = ""This is a backslash: \\ """,buggy
+single_quote = 'It's a sunny day.',buggy
+"double_quote = ""He said, ""Hello!""""",buggy
+"carriage_return = ""First Line\ Second""",buggy
+"bell_sound = ""Beep!\b""",buggy
+"form_feed = ""Page 1fPage 2""",buggy
+"octal_value = ""\999""",buggy
+"hex_value = ""\xZZ""",buggy
+"unicode_value = ""\u03G9""",buggy
+"raw_string = r""This will not escape \n""",buggy
+"new_line_raw = r""This is not a new line \n""",buggy
+"backspace = ""123b4""",buggy
+"vertical_tab = ""Line1vLine2""",buggy
+"alert = ""Warning!\l""",buggy
+"quote_in_quote = ""She said, 'Hello""",buggy
+"multi_escape = ""Line1nLine2\tTabbed""",buggy
+"unicode_smile = ""\U0001F60""",buggy
+"escaped_raw = r""C:\Users\Username""",buggy
+"text = ""hello world"".capitalize()",bug-free
+"upper_text = ""hello"".upper()",bug-free
+"lower_text = ""HELLO"".lower()",bug-free
+"count_l = ""hello"".count('l')",bug-free
+"find_sub = ""hello"".find('lo')",bug-free
+"replace_sub = ""hello world"".replace(""world"", ""there"")",bug-free
+"is_alpha = ""hello"".isalpha()",bug-free
+"is_digit = ""12345"".isdigit()",bug-free
+"is_space = "" "".isspace()",bug-free
+"split_text = ""hello world"".split()",bug-free
+"strip_spaces = "" hello "".strip()",bug-free
+"startswith_hello = ""hello world"".startswith(""hello"")",bug-free
+"endswith_world = ""hello world"".endswith(""world"")",bug-free
+"title_text = ""hello world"".title()",bug-free
+"join_list = ""-"".join([""2025"", ""02"", ""23""])",bug-free
+"swap_case = ""Hello"".swapcase()",bug-free
+"zfill_num = ""42"".zfill(5)",bug-free
+"ljust_text = ""left"".ljust(10)",bug-free
+"rjust_text = ""right"".rjust(10)",bug-free
+"center_text = ""center"".center(11)",bug-free
+"encode_utf8 = ""hello"".encode(""utf-8"")",bug-free
+"expand_tabs = ""a\tb\tc"".expandtabs(4)",bug-free
+"partitioned = ""key=value"".partition(""="")",bug-free
+"rpartitioned = ""key=value=value2"".rpartition(""="")",bug-free
+"casefolded = ""HELLO"".casefold()",bug-free
+"isdigit_unicode = ""²"".isdigit()",bug-free
+"text = ""hello world"".capitalise()",buggy
+"upper_text = ""hello"".Upper()",buggy
+"lower_text = ""HELLO"".Lower()",buggy
+"count_l = ""hello"".count()",buggy
+"find_sub = ""hello"".find()",buggy
+"replace_sub = ""hello world"".replace(""world"")",buggy
+"is_alpha = ""hello123"".isalpha()",buggy
+"is_digit = ""12a45"".isdigit()",buggy
+"is_space = ""text"".isspace()",buggy
+"split_text = ""hello world"".split("" "")",buggy
+"strip_spaces = "" hello "".strip(1)",buggy
+"startswith_hello = ""hello world"".startswith()",buggy
+"endswith_world = ""hello world"".endswith(""World"")",buggy
+"title_text = ""hello world"".Title()",buggy
+"join_list = ""-"".join(""20250223"")",buggy
+"swap_case = ""Hello"".SwapCase()",buggy
+"zfill_num = ""42"".zfill(""5"")",buggy
+"ljust_text = ""left"".ljust(""10"")",buggy
+"rjust_text = ""right"".rjust()",buggy
+"center_text = ""center"".center()",buggy
+"encode_utf8 = ""hello"".encode(""utf-16"")",buggy
+"expand_tabs = ""a\tb\tc"".expandtabs(""4"")",buggy
+"partitioned = ""key=value"".partition()",buggy
+"rpartitioned = ""key=value=value2"".rpartition()",buggy
+"casefolded = ""HELLO"".CaseFold()",buggy
+"isdigit_unicode = ""2²"".isdigit()",buggy
+"x = True
+if x:
+    print(""It's True!"")",bug-free
+"y = False
+if not y:
+    print(""It's False!"")",bug-free
+"a = 5
+b = 10
+if a < b:
+    print(""a is less than b"")",bug-free
+"status = True
+if status:
+    print(""Active"")",bug-free
+"age = 18
+if age >= 18:
+    print(""You are an adult"")",bug-free
+"num = 0
+if not num:
+    print(""Zero detected"")",bug-free
+"flag = False
+if flag == False:
+    print(""Flag is off"")",bug-free
+"is_valid = True
+print(""Valid"" if is_valid else ""Invalid"")",bug-free
+"x = 7
+if x % 2 == 0:
+    print(""Even"")
+else:
+    print(""Odd"")",bug-free
+"a, b = 3, 5
+if a == b:
+    print(""Equal"")
+else:
+    print(""Not Equal"")",bug-free
+"x = True
+if x
+    print(""It's True!"")",buggy
+"y = False
+if not y: print ""It's False!""",buggy
+"a = 5
+b = 10
+if a <> b:
+    print(""Different"")",buggy
+"status = True
+if status = True:
+    print(""Active"")",buggy
+"age = 18
+if age => 18:
+    print(""Adult"")",buggy
+"num = 0
+if num:
+    print(""Zero detected"")",buggy
+"flag = False
+if flag = False:
+    print(""Flag off"")",buggy
+"is_valid = True
+print(""Valid"" if is_valid : ""Invalid"")",buggy
+"x = 7
+if x % 2 = 0:
+    print(""Even"")",buggy
+"a, b = 3, 5
+if a == b
+    print(""Equal"")",buggy
+"x = 10
+y = 5
+result = x + y
+print(result)",bug-free
+"a = 20
+b = 4
+division = a / b
+print(division)",bug-free
+"num1 = 15
+num2 = 3
+modulus = num1 % num2
+print(modulus)",bug-free
+"value = 2 ** 3
+print(value)",bug-free
+"a = 10
+b = 5
+if a > b:
+    print(""a is greater than b"")",bug-free
+"x = 5
+x += 2
+print(x)",bug-free
+"x = 10
+y = 0
+if x and y:
+    print(""Both are True"")",bug-free
+"x = 0
+if not x:
+    print(""x is False"")",bug-free
+"x = 10
+y = 20
+if x != y:
+    print(""x is not equal to y"")",bug-free
+"a = [1, 2, 3]
+b = [1, 2, 3]
+if a is not b:
+    print(""Different objects"")",bug-free
+"x = 10
+y = 5
+result = x +
+print(result)",buggy
+"a = 20
+b = 0
+division = a / b
+print(division)",buggy
+"num1 = 15
+num2 = 0
+modulus = num1 % num2
+print(modulus)",buggy
+"value = 2 **
+print(value)",buggy
+"a = 10
+b = 5
+if a >< b:
+    print(""a is greater than b"")",buggy
+"x = 5
+x +=
+print(x)",buggy
+"x = 10
+y = 0
+if x && y:
+    print(""Both are True"")",buggy
+"x = 0
+if not:
+    print(""x is False"")",buggy
+"x = 10
+y = 20
+if x !== y:
+    print(""x is not equal to y"")",buggy
+"a = [1, 2, 3]
+b = [1, 2, 3]
+if a = b:
+    print(""Same objects"")",buggy
+"x = 5
+y = 10
+z = x + y
+print(z)",bug-free
+"a = 20
+b = 4
+result = a / b
+print(result)",bug-free
+"num = 7
+square = num * num
+print(square)",bug-free
+"x = 10
+y = 0
+z = x / y
+print(z)",buggy
+"value = 8
+value **= 2
+print(value)",bug-free
+"a = 15
+b = 3
+mod = a % b
+print(mod)",bug-free
+"if a == b:
+    print(""Equal"")",bug-free
+"if x => y:
+    print(""Greater"")",buggy
+"a = 5
+a += 10
+print(a)",bug-free
+"total = 100
+total -= 30
+print(total)",bug-free
+"if (x == y or y == z):
+    print(""Match found"")",bug-free
+"if x and y:
+    print(""Both true"")",bug-free
+"if x && y:
+    print(""Error in logical operator"")",buggy
+"list1 = [1, 2, 3]
+if 4 in list1:
+    print(""Found"")",bug-free
+"list2 = [10, 20, 30]
+if 25 not on list2:
+    print(""Not Found"")",buggy
+"a = 10
+b = 5
+bitwise = a & b
+print(bitwise)",bug-free
+"shift = a << 2
+print(shift)",bug-free
+"bitwise = a && b
+print(bitwise)",buggy
+"my_list = [1, 2, 3]
+if 2 in my_list:
+    print(""Exists"")",bug-free
+"value = None
+if value is None:
+    print(""No value"")",bug-free
+"if 5 not in my_list:
+    print(""Missing"")",bug-free
+"x = True
+y = False
+if x or y:
+    print(""One is true"")",bug-free
+"if not y:
+    print(""y is False"")",bug-free
+"result = 10 /
+print(result)",buggy
+"a = 10
+b = 0
+div = a / b
+print(div)",buggy
+"num = 5
+fact = 1
+for i in range(1, num+1):
+    fact *= i
+print(fact)",bug-free
+"x = 5
+if x > 0:
+    print(""Positive"")",bug-free
+"x = -3
+if x >:
+    print(""Error"")",buggy
+"name = ""Python""
+print(""Language:"", name)",bug-free
+"if x is y:
+    print(""Same object"")",bug-free
+"a = [1, 2]
+b = [1, 2]
+if a === b:
+    print(""Incorrect syntax"")",buggy
+"a = 10
+b = 20
+print(""Max is"", max(a, b))",bug-free
+"x = 10
+y = 20
+if x != y:
+    print(""Not equal"")",bug-free
+"z = x >< y
+print(z)",buggy
+"a = 7
+b = 5
+`print(a",b)`
+"shift = a >> 1
+print(shift)",bug-free
+"comparison = a >< b
+print(comparison)",buggy
+"lst = [1, 2, 3, 4]
+print(lst[2:])",bug-free
+"s = ""Hello""
+print(s[::-1])",bug-free
+"s = ""Buggy""
+print(s[5])",buggy
+"text = ""Python""
+print(text.lower())",bug-free
+"text = ""python""
+print(text.capitalize())",bug-free
+"s = ""Error""
+s.upper",buggy
+"x = None
+if x is None:
+    print(""None value"")",bug-free
+"x = True
+if not x:
+    print(""False"")",bug-free
+"if not:
+    print(""Syntax Error"")",buggy
+"x = 5
+y = 3
+result = (x + y) * (x - y)
+print(result)",bug-free
+"my_list = [1, 2, 3, 4, 5]
+print(my_list)",bug-free
+"fruits = [""apple"", ""banana"", ""cherry""]
+print(fruits[1])",bug-free
+"numbers = [10, 20, 30]
+numbers.append(40)
+print(numbers)",bug-free
+"letters = ['a', 'b', 'c']
+letters.insert(1, 'z')
+print(letters)",bug-free
+"items = [5, 10, 15]
+items.remove(10)
+print(items)",bug-free
+"nums = [1, 2, 3, 4]
+nums.pop(2)
+print(nums)",bug-free
+"vals = [5, 3, 9, 1]
+vals.sort()
+print(vals)",bug-free
+"rev_list = [1, 2, 3, 4]
+rev_list.reverse()
+print(rev_list)",bug-free
+"lst = [""hello"", ""world""]
+joined = "" "".join(lst)
+print(joined)",bug-free
+"lst = [10, 20, 30]
+sum_lst = sum(lst)
+print(sum_lst)",bug-free
+"my_list = [1, 2, 3]
+print(my_list[5])",buggy
+"nums = [1, 2, 3]
+nums.append()",buggy
+"x = [1, 2, 3]
+del x[5]",buggy
+"y = [1, 2, 3]
+print(y[-4])",buggy
+"a = [10, 20, 30]
+print(a[::2])",bug-free
+"b = [""one"", ""two"", ""three""]
+print(b[::-1])",bug-free
+"list1 = [10, 20]
+list2 = [30, 40]
+merged = list1 + list2
+print(merged)",bug-free
+"nums = [10, 20, 30]
+nums *= 2
+print(nums)",bug-free
+"arr = [1, 2, 3]
+arr.extend(4, 5, 6)",buggy
+"nested = [[1, 2], [3, 4]]
+print(nested[1][1])",bug-free
+"lst = [""a"", ""b"", ""c""]
+lst.clear()
+print(lst)",bug-free
+"nums = [4, 2, 8]
+print(sorted(nums))",bug-free
+"data = [5, 6, 7]
+print(len(data))",bug-free
+"list1 = [10, 20]
+list2 = list1.copy()
+print(list2)",bug-free
+"mix = [1, ""hello"", 3.5]
+print(mix)",bug-free
+"squares = [x**2 for x in range(5)]
+print(squares)",bug-free
+"evens = [x for x in range(10) if x % 2 == 0]
+print(evens)",bug-free
+"nums = [1, 2, 3]
+print(max(nums))",bug-free
+"nums = [10, 20, 30]
+print(min(nums))",bug-free
+"lst = [10, 20, 30]
+print(lst.index(20))",bug-free
+"lst = [10, 20, 30]
+print(lst.count(10))",bug-free
+"nums = [1, 2, 3]
+nums.remove(5)",buggy
+"vals = [10, 20, 30]
+vals.insert()",buggy
+"matrix = [[1, 2], [3, 4]]
+print(matrix[1, 1])",buggy
+"nums = [1, 2, 3]
+nums.sort(reverse=True)
+print(nums)",bug-free
+"lst = [x * 2 for x in range(10)]
+print(lst)",bug-free
+"vals = [10, 20, 30]
+vals = vals.sort()
+print(vals)",buggy
+"data = [3, 6, 9]
+data.pop(-1)
+print(data)",bug-free
+"fruits = [""apple"", ""banana""]
+print(""apple"" in fruits)",bug-free
+"numbers = [10, 20, 30]
+print(40 in numbers)",bug-free
+"nums = [1, 2, 3]
+nums += 4",buggy
+"items = [5, 10]
+items.append([15, 20])
+print(items)",bug-free
+"my_list = [None] * 5
+print(my_list)",bug-free
+"slices = [1, 2, 3, 4, 5]
+print(slices[::3])",bug-free
+"x = [1, 2]
+print(x * 3)",bug-free
+"vals = [3, 2, 1]
+vals = vals[::-1]
+print(vals)",bug-free
+"nums = [1, 2, 3]
+nums.sort()
+print(nums)",bug-free
+"data = [1, 2, 3]
+print(sum(data) / len(data))",bug-free
+"a = [1, 2, 3]
+b = a.copy()
+b.append(4)
+print(a, b)",bug-free
+"nums = [x for x in range(5) if x % 2 == 1]
+print(nums)",bug-free
+"items = [1, 2, 3]
+print(any(items))",bug-free
+"values = [0, 0, 0]
+print(all(values))",bug-free
+"a = [1, 2]
+b = [3, 4]
+print(a + b)",bug-free
+"lst = [x for x in range(100)]
+print(lst[50:60])",bug-free
+"my_list = [10, 20, 30]
+my_list[1] = 25
+print(my_list)",bug-free
+"fruits = [""apple"", ""banana"", ""cherry""]
+fruits[0] = ""mango""
+print(fruits)",bug-free
+"colors = [""red"", ""green"", ""blue""]
+colors[-1] = ""purple""
+print(colors)",bug-free
+"nums = [1, 2, 3, 4, 5]
+nums[2:4] = [30, 40]
+print(nums)",bug-free
+"values = [10, 20, 30]
+values[:] = [100, 200, 300]
+print(values)",bug-free
+"items = [5, 10, 15]
+items[1:2] = [12, 13]
+print(items)",bug-free
+"nums = [1, 2, 3]
+nums[3] = 4",buggy
+"data = [10, 20, 30]
+data[1:5] = [25, 35, 45, 55]
+print(data)",bug-free
+"list1 = [0, 1, 2, 3, 4]
+list1[2:] = []
+print(list1)",bug-free
+"my_list = [10, 20, 30]
+my_list[0:5] = [1, 2]
+print(my_list)",buggy
+"nums = [1, 2, 3, 4, 5]
+nums[:3] = [10, 20, 30]
+print(nums)",bug-free
+"my_list = [5, 6, 7]
+my_list[0] = my_list[0] + 10
+print(my_list)",bug-free
+"fruits = [""apple"", ""banana"", ""cherry""]
+fruits[5] = ""mango""",buggy
+"colors = [""red"", ""green"", ""blue""]
+colors[1:1] = [""yellow""]
+print(colors)",bug-free
+"nums = [1, 2, 3, 4]
+nums[::2] = [10, 30]
+print(nums)",bug-free
+"list1 = [0, 1, 2]
+list1[:2] = []
+print(list1)",bug-free
+"values = [1, 2, 3]
+values[1:4] = [4, 5]",buggy
+"letters = ['a', 'b', 'c', 'd']
+letters[1:3] = ['x', 'y']
+print(letters)",bug-free
+"nums = [10, 20, 30]
+nums[:] = []
+print(nums)",bug-free
+"a = [1, 2, 3]
+a[::] = [3, 2, 1]
+print(a)",bug-free
+"my_list = [1, 2, 3]
+my_list[::2] = [10]",buggy
+"x = [1, 2, 3, 4]
+x[0:4:2] = [10, 20]
+print(x)",bug-free
+"list1 = [10, 20, 30]
+list1[0:1] = 100",buggy
+"nums = [5, 10, 15, 20]
+nums[1:3] = []
+print(nums)",bug-free
+"chars = ['a', 'b', 'c']
+chars[3] = 'd'",buggy
+"nested = [[1, 2], [3, 4]]
+nested[0][1] = 5
+print(nested)",bug-free
+"nums = [1, 2, 3]
+nums[1:2] = nums[1:2] + [4]
+print(nums)",bug-free
+"values = [10, 20, 30]
+values[5] = 40",buggy
+"a = [0, 0, 0]
+a[0] = a[1] = a[2] = 1
+print(a)",bug-free
+"my_list = [1, 2, 3]
+my_list.append(4)
+print(my_list)",bug-free
+"fruits = [""apple"", ""banana""]
+fruits.append(""cherry"")
+print(fruits)",bug-free
+"colors = [""red"", ""green""]
+colors.insert(1, ""blue"")
+print(colors)",bug-free
+"nums = [1, 2, 3]
+nums.insert(10, 4)
+print(nums)",bug-free
+"values = [10, 20]
+values.extend([30, 40])
+print(values)",bug-free
+"items = [1, 2]
+items += [3, 4]
+print(items)",bug-free
+"my_list = [1, 2, 3]
+my_list.append()",buggy
+"fruits = [""apple""]
+fruits.insert(0)",buggy
+"colors = [""red""]
+colors.extend(""blue"")
+print(colors)",bug-free
+"nums = [1, 2, 3]
+nums += 4",buggy
+"list1 = [1, 2]
+list1.append([3, 4])
+print(list1)",bug-free
+"values = [10, 20]
+values.extend(30)",buggy
+"a = [1, 2]
+a.insert(1, [3, 4])
+print(a)",bug-free
+"nums = [1, 2]
+nums.append(None)
+print(nums)",bug-free
+"my_list = []
+my_list.append(1, 2)",buggy
+"letters = ['a', 'b']
+letters += ['c', 'd']
+print(letters)",bug-free
+"chars = ['x']
+chars.append(['y', 'z'])
+print(chars)",bug-free
+"nums = [1, 2, 3]
+nums.insert(1)",buggy
+"items = [1, 2, 3]
+items += None",buggy
+"fruits = [""apple""]
+fruits.extend([""banana"", ""cherry""])
+print(fruits)",bug-free
+"data = []
+data.append(0)
+data.append(1)
+print(data)",bug-free
+"values = [5]
+values.insert(0, 10)
+print(values)",bug-free
+"list1 = [1, 2]
+list1.append([3, 4])
+print(list1[2])",buggy
+"nums = []
+nums.insert(-1, 100)
+print(nums)",bug-free
+"letters = ['a', 'b']
+letters.insert(5, 'c')
+print(letters)",bug-free
+"colors = [""red""]
+colors.append(""green"")
+colors.insert(5, ""blue"")
+print(colors)",bug-free
+"nums = [1, 2, 3]
+nums += (4, 5)
+print(nums)",buggy
+"list1 = []
+list1.append(""item"")
+print(list1)",bug-free
+"nums = [1, 2]
+nums.append(nums)",bug-free
+"x = [1, 2]
+x.extend(3)",buggy
+"my_list = [1, 2, 3]
+my_list.remove(2)
+print(my_list)",bug-free
+"fruits = [""apple"", ""banana"", ""cherry""]
+fruits.pop()
+print(fruits)",bug-free
+"colors = [""red"", ""green"", ""blue""]
+del colors[1]
+print(colors)",bug-free
+"nums = [1, 2, 3, 4]
+nums.clear()
+print(nums)",bug-free
+"items = [""a"", ""b"", ""c""]
+items.pop(0)
+print(items)",bug-free
+"my_list = [1, 2, 3]
+my_list.remove(4)",buggy
+"fruits = [""apple""]
+fruits.pop(2)",buggy
+"colors = [""red""]
+del colors[5]",buggy
+"nums = []
+nums.pop()",buggy
+"items = [""a"", ""b""]
+del items
+print(items)",buggy
+"list1 = [1, 2, 3]
+list1.remove(3)
+print(list1)",bug-free
+"values = [10, 20, 30]
+values.pop(2)
+print(values)",bug-free
+"letters = ['a', 'b', 'c']
+letters.clear()
+print(letters)",bug-free
+"nums = [1, 2, 3]
+del nums[1]
+print(nums)",bug-free
+"my_list = [1, 2, 3]
+my_list.pop(3)",buggy
+"colors = [""red"", ""green""]
+colors.remove(""blue"")",buggy
+"fruits = [""apple"", ""banana""]
+del fruits[5]",buggy
+"items = [""a"", ""b"", ""c""]
+items.pop()
+items.pop()
+items.pop()
+items.pop()",buggy
+"nums = [1, 2, 3]
+del nums[0:2]
+print(nums)",bug-free
+"list1 = [1, 2, 3]
+list1.remove(list1[0])
+print(list1)",bug-free
+"values = [10, 20, 30]
+values.pop()
+values.pop()
+values.pop()
+values.pop()",buggy
+"letters = []
+letters.remove('a')",buggy
+"nums = [1, 2, 3]
+del nums
+print(nums)",buggy
+"my_list = [1, 2, 3, 4, 5]
+del my_list[1:3]
+print(my_list)",bug-free
+"colors = [""red"", ""green"", ""blue""]
+colors.clear()
+print(colors)",bug-free
+"nums = [1, 2, 3]
+nums.remove(""2"")",buggy
+"list1 = [1, 2, 3]
+del list1[5]",buggy
+"values = [10, 20, 30, 40]
+values.pop(1)
+print(values)",bug-free
+"letters = ['a', 'b']
+letters.pop(3)",buggy
+"items = [""x"", ""y"", ""z""]
+items.remove(""y"")
+print(items)",bug-free
+"fruits = [""apple"", ""banana"", ""cherry""]
+for fruit in fruits:
+   print(fruit)",bug-free
+"numbers = [1, 2, 3, 4, 5]
+for num in numbers:
+   print(num * 2)",bug-free
+"colors = [""red"", ""green"", ""blue""]
+for i in range(len(colors)):
+   print(colors[i])",bug-free
+"my_list = [1, 2, 3]
+for i in my_list:
+   if i % 2 == 0:
+      print(f""{i} is even"")",bug-free
+"words = [""hello"", ""world""]
+[print(word.upper()) for word in words]",bug-free
+"items = [""a"", ""b"", ""c""]
+for item in items:
+   print(item)
+print(""Done!"")",bug-free
+"nums = [1, 2, 3]
+for n in nums
+   print(n)",buggy
+"colors = [""red"", ""green"", ""blue""]
+for i in range(colors):
+   print(colors[i])",buggy
+"list1 = [1, 2, 3]
+for i in range(len(list1)):
+   print(list1[i]",buggy
+"words = [""hello"", ""world""]
+for word in words:
+   print(word.upper",buggy
+"fruits = [""apple"", ""banana""]
+for fruit in fruits:
+   if fruit == ""apple"":
+      fruits.remove(fruit)
+print(fruits)",buggy
+"nums = [1, 2, 3, 4]
+i = 0
+while i < len(nums):
+   print(nums[i])
+   i += 1",bug-free
+"letters = ['a', 'b', 'c']
+for index, letter in enumerate(letters):
+   print(f""Index {index}: {letter}"")",bug-free
+"values = [1, 2, 3]
+for i in values:
+   print(i)
+   values.remove(i)",buggy
+"colors = [""red"", ""green"", ""blue""]
+for color in colors:
+   if color == ""green"":
+      continue
+   print(color)",bug-free
+"my_list = [10, 20, 30, 40]
+for i in my_list:
+   if i == 30:
+      break
+   print(i)",bug-free
+"nums = [1, 2, 3]
+for n in nums:
+   if n % 2 = 0:
+      print(""Even"")",buggy
+"data = [10, 20, 30]
+total = 0
+for num in data:
+   total += num
+print(total)",bug-free
+"items = [""a"", ""b"", ""c""]
+for item in items:
+   print(item.upper())",bug-free
+squares = [x**2 for x in range(10)],bug-free
+evens = [x for x in range(20) if x % 2 == 0],bug-free
+"words = [""hello"", ""world"", ""python""]
+capitalized = [word.upper() for word in words]",bug-free
+"nums = [1, 2, 3, 4, 5]
+doubled = [n * 2 for n in nums]",bug-free
+matrix = [[i*j for j in range(3)] for i in range(3)],bug-free
+"chars = [char for char in ""hello""]",bug-free
+"non_empty = [x for x in [""a"", """", ""b"", """", ""c""] if x != """"]",bug-free
+"flattened = [num for row in [[1, 2], [3, 4], [5, 6]] for num in row]",bug-free
+"negatives = [-x for x in range(1, 6)]",bug-free
+squares = [x ** 2 for x in range(10],buggy
+odds = [x for x in range(10) if x % 2 = 1],buggy
+result = [n*2 for n in range(5) if n > 2 else n],buggy
+"flattened = [num for row in [[1, 2], [3, 4], [5, 6] for num in row]",buggy
+"data = [1, 2, 3, 4]
+new_data = [x + for x in data]",buggy
+"strings = [""a"", ""b"", ""c""]
+lengths = [len(s) for s in strings if len(s) > 1]",bug-free
+"values = [x if x % 2 == 0 else ""odd"" for x in range(10)]",bug-free
+"nums = [1, 2, 3]
+tripled = [n * 3 for n in nums if n != 2]",bug-free
+"nums = [1, 2, 3, 4]
+result = [x // 0 for x in nums]",buggy
+"text = [""Hello"", ""World""]
+lowercase = [t.lower for t in text]",buggy
+"fruits = [""apple"", ""banana"", ""cherry"", ""kiwi"", ""mango""]
+
+newlist = [x for x in fruits if ""a"" in x]
+
+print(newlist)",bug-free
+"numbers = [5, 2, 9, 1, 5, 6]
+numbers.sort()",bug-free
+"words = [""banana"", ""apple"", ""cherry""]
+words.sort()",bug-free
+"numbers = [5, 2, 9, 1, 5, 6]
+sorted_numbers = sorted(numbers)",bug-free
+"words = [""banana"", ""apple"", ""cherry""]
+sorted_words = sorted(words, reverse=True)",bug-free
+"numbers = [5, 2, 9, 1, 5, 6]
+numbers.sort(reverse=True)",bug-free
+"words = [""banana"", ""Apple"", ""cherry""]
+words.sort(key=str.lower)",bug-free
+"students = [(""John"", 88), (""Emma"", 92), (""Sam"", 79)]
+students.sort(key=lambda x: x[1])",bug-free
+"nums = [3, 2, 1]
+nums.sort(reverse=Flase)",buggy
+"words = [""apple"", ""banana"", ""cherry""]
+words.srt()",buggy
+"data = [5, 4, 3, 2, 1]
+sorted_data = sorted(data, revers=True)",buggy
+"nums = [1, 2, 3]
+nums.sort(key=lambda x: x[1])",buggy
+"strings = [""a"", ""B"", ""c""]
+strings.sort(key=lower)",buggy
+"students = [(""John"", 88), (""Emma"", 92), (""Sam"", 79)]
+students.sort(key=lamda x: x[1])",buggy
+"numbers = [3, 1, 4, 2]
+sorted_numbers = sorted(numbers, key=lambda x: -x)",bug-free
+"numbers = [10, 20, 30, 40]
+sorted_numbers = sorted(numbers, key=lambda x: x % 3)",bug-free
+"words = [""Banana"", ""apple"", ""Cherry""]
+words.sort(key=str.upper)",bug-free
+"original_list = [1, 2, 3, 4, 5]
+copied_list = original_list.copy()",bug-free
+"original_list = [""apple"", ""banana"", ""cherry""]
+copied_list = list(original_list)",bug-free
+"original_list = [10, 20, 30]
+copied_list = original_list[:]",bug-free
+"import copy
+original_list = [[1, 2], [3, 4]]
+copied_list = copy.deepcopy(original_list)",bug-free
+"original_list = [1, 2, 3]
+copied_list = original_list",buggy
+"original_list = [""a"", ""b"", ""c""]
+copied_list = original_list.copy",buggy
+"original_list = [5, 6, 7]
+copied_list = original_list.clone()",buggy
+"original_list = [10, 20, 30]
+copied_list = original_list[::]",buggy
+"original_list = [1, 2, 3, 4]
+copied_list = list.copy(original_list)",buggy
+"import copy
+original_list = [[1, 2], [3, 4]]
+copied_list = copy.copyy(original_list)",buggy
+"original_list = [1, 2, 3]
+copied_list = original_list.deepcopy()",buggy
+"original_list = [10, 20, 30]
+copied_list = original_list + []",bug-free
+"original_list = [""apple"", ""banana"", ""cherry""]
+copied_list = [item for item in original_list]",bug-free
+"original_list = [5, 6, 7]
+copied_list = [*original_list]",bug-free
+"list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+joined_list = list1 + list2",bug-free
+"list1 = [""apple"", ""banana""]
+list2 = [""cherry"", ""date""]
+list1.extend(list2)",bug-free
+"list1 = [True, False]
+list2 = [False, True]
+joined_list = [*list1, *list2]",bug-free
+"list1 = [""a"", ""b""]
+list2 = [""c"", ""d""]
+joined_list = list1.copy()
+joined_list.extend(list2)",bug-free
+"list1 = [1, 2]
+list2 = [3, 4]
+for item in list2:
+&nbsp;&nbsp;&nbsp;&nbsp;list1.append(item)",bug-free
+"list1 = [1, 2]
+list2 = [3, 4]
+joined_list = list1.join(list2)",buggy
+"list1 = [""apple"", ""banana""]
+list2 = [""cherry"", ""date""]
+joined_list = list1.add(list2)",buggy
+"list1 = [True, False]
+list2 = [False, True]
+joined_list = list1 + list2 +",buggy
+"list1 = [""a"", ""b""]
+list2 = [""c"", ""d""]
+joined_list = list1.extend(list2)",buggy
+"list1 = [1, 2]
+list2 = [3, 4]
+joined_list = list1.append(list2)",buggy
+"list1 = [5, 6]
+list2 = [7, 8]
+joined_list = [list1 + list2]",buggy
+"list1 = [9, 10]
+list2 = [11, 12]
+joined_list = list1.concat(list2)",buggy
+"list1 = [1, 2, 3]
+list2 = []
+joined_list = list1 + list2",bug-free
+"list1 = []
+list2 = []
+joined_list = list1 + list2",bug-free
+"my_list = [1, 2, 3]
+my_list.append(4)",bug-free
+"my_list = [1, 2, 3]
+my_list.extend([4, 5])",bug-free
+"my_list = [1, 2, 3]
+my_list.insert(1, 10)",bug-free
+"my_list = [1, 2, 3]
+my_list.remove(2)",bug-free
+"my_list = [1, 2, 3, 2]
+my_list.pop(2)",bug-free
+"my_list = [1, 2, 3, 2]
+count = my_list.count(2)",bug-free
+"my_list = [3, 1, 4, 2]
+my_list.sort()",bug-free
+"my_list = [3, 1, 4, 2]
+my_list.reverse()",bug-free
+"my_list = [1, 2, 3]
+copied_list = my_list.copy()",bug-free
+"my_list = [1, 2, 3]
+my_list.clear()",bug-free
+"my_list = [1, 2, 3]
+my_list.append()",buggy
+"my_list = [1, 2, 3]
+my_list.extend(4, 5)",buggy
+"my_list = [1, 2, 3]
+my_list.insert()",buggy
+"my_list = [1, 2, 3]
+my_list.remove(5)",buggy
+"my_list = [1, 2, 3]
+my_list.pop(5)",buggy
+"my_list = [1, 2, 3]
+count = my_list.count()",buggy
+"my_list = [1, 2, 3]
+my_list.sort(reverse)",buggy
+"my_list = [1, 2, 3]
+my_list.reverse(1)",buggy
+"my_list = [1, 2, 3]
+copied_list = my_list.copy(1)",buggy
+"my_list = [1, 2, 3]
+my_list.clear(1)",buggy
+"my_list = [1, 2, 3]
+my_list.index(2)",bug-free
+"my_list = [1, 2, 3]
+index = my_list.index(5)",buggy
+"my_list = [1, 2, 3]
+new_list = list(reversed(my_list))",bug-free
+"my_list = [1, 2, 3]
+new_list = reversed(my_list)",bug-free
+"my_list = [1, 2, 3]
+my_list.sort(key=lambda x: -x)",bug-free
+"my_list = ['apple', 'banana', 'cherry']
+my_list.sort(key=len)",bug-free
+"my_list = [1, 2, 3]
+sorted_list = my_list.sorted()",buggy
+"my_list = [1, 2, 3]
+sorted_list = sort(my_list)",buggy
+"my_tuple = (1, 2, 3)",bug-free
+"my_tuple = (1,)",bug-free
+"my_tuple = tuple([1, 2, 3])",bug-free
+"my_tuple = 1, 2, 3",bug-free
+"my_tuple = ('apple', 'banana', 'cherry')
+print(my_tuple[1])",bug-free
+"my_tuple = (1, 2, 3)
+print(len(my_tuple))",bug-free
+"my_tuple = (1, 2, 3)
+new_tuple = my_tuple + (4, 5)",bug-free
+"my_tuple = (1, 2, 3)
+count = my_tuple.count(2)",bug-free
+"my_tuple = (1, 2, 3)
+index = my_tuple.index(3)",bug-free
+"my_tuple = (1, 2, 3)
+for i in my_tuple:\n\tprint(i)",bug-free
+"my_tuple = (1, 2, 3)
+if 2 in my_tuple:\n\tprint(""Found"")",bug-free
+"my_tuple = (1, 2, 3)
+my_tuple[1] = 4",buggy
+"my_tuple = (1, 2, 3)
+my_tuple.append(4)",buggy
+"my_tuple = (1, 2, 3)
+my_tuple.remove(2)",buggy
+"my_tuple = (1, 2, 3)
+my_tuple.pop()",buggy
+"my_tuple = (1, 2, 3)
+print(my_tuple[5])",buggy
+"my_tuple = (1, 2, 3)
+del my_tuple[1]",buggy
+"my_tuple = (1, 2, 3)
+new_tuple = my_tuple.extend((4, 5))",buggy
+"my_tuple = (1, 2, 3)
+sorted_tuple = my_tuple.sort()",buggy
+"my_tuple = (1, 2, 3)
+my_tuple.clear()",buggy
+"my_tuple = (1, 2, 3)
+a, b, c = my_tuple",bug-free
+"my_tuple = (1, 2)
+a, b, c = my_tuple",buggy
+"my_tuple = (1, 2, 3)
+a, *b = my_tuple",bug-free
+"my_tuple = (1, 2, 3)
+a, *b, c = my_tuple",bug-free
+"my_tuple = ('apple', 'banana', 'cherry')
+print(my_tuple[0])",bug-free
+"my_tuple = (10, 20, 30, 40)
+print(my_tuple[2])",bug-free
+"my_tuple = (1, 2, 3, 4, 5)
+print(my_tuple[-1])",bug-free
+"my_tuple = ('a', 'b', 'c', 'd')
+print(my_tuple[1:3])",bug-free
+"my_tuple = ('x', 'y', 'z')
+for item in my_tuple:\n\tprint(item)",bug-free
+"my_tuple = (1, 2, 3, 4)
+print(my_tuple[:2])",bug-free
+"my_tuple = (1, 2, 3)
+if 2 in my_tuple:\n\tprint(""Exists"")",bug-free
+"my_tuple = ('hello',)
+print(my_tuple[0])",bug-free
+"my_tuple = (1, 2, 3)
+a, b, c = my_tuple",bug-free
+"my_tuple = (1, 2, 3)
+a, *b = my_tuple",bug-free
+"my_tuple = (1, 2, 3)
+print(my_tuple[5])",buggy
+"my_tuple = (1, 2, 3)
+print(my_tuple[-4])",buggy
+"my_tuple = ()
+print(my_tuple[0])",buggy
+"my_tuple = (1, 2, 3)
+for i in range(4):\n\tprint(my_tuple[i])",buggy
+"my_tuple = (1, 2, 3)
+a, b = my_tuple",buggy
+"my_tuple = (1, 2, 3)
+my_tuple[0] = 10",buggy
+"my_tuple = (1, 2, 3)
+del my_tuple[1]",buggy
+"my_tuple = (1, 2, 3)
+my_tuple = my_tuple + (4,)
+print(my_tuple)",bug-free
+"my_tuple = ('apple', 'banana')
+temp_list = list(my_tuple)
+temp_list[1] = 'cherry'
+my_tuple = tuple(temp_list)
+print(my_tuple)",bug-free
+"my_tuple = (10, 20, 30)
+my_tuple = my_tuple[:1] + (25,) + my_tuple[2:]
+print(my_tuple)",bug-free
+"my_tuple = ('x', 'y')
+new_elements = ('z',)
+my_tuple = my_tuple + new_elements
+print(my_tuple)",bug-free
+"my_tuple = (1, 2, 3, 4)
+updated_tuple = tuple(x * 2 for x in my_tuple)
+print(updated_tuple)",bug-free
+"my_tuple = (5,) * 3
+print(my_tuple)",bug-free
+"my_tuple = ('a', 'b', 'c')
+index = 1
+my_tuple = my_tuple[:index] + ('z',) + my_tuple[index+1:]
+print(my_tuple)",bug-free
+"my_tuple = (1, 2, 3)
+my_tuple[0] = 10",buggy
+"my_tuple = ('apple', 'banana')
+del my_tuple[1]",buggy
+"my_tuple = (1, 2, 3)
+my_tuple.append(4)",buggy
+"my_tuple = (1, 2, 3)
+my_tuple.insert(1, 5)",buggy
+"my_tuple = (1, 2, 3)
+my_tuple.remove(2)",buggy
+"my_tuple = (1, 2, 3)
+a, b, c = my_tuple
+print(a, b, c)",bug-free
+"my_tuple = ('apple', 'banana', 'cherry')
+fruit1, fruit2, fruit3 = my_tuple
+print(fruit1, fruit2, fruit3)",bug-free
+"my_tuple = (1, 2, 3, 4)
+a, *b, c = my_tuple
+print(a, b, c)",bug-free
+"my_tuple = ('x', 'y')
+a, b = my_tuple
+print(a, b)",bug-free
+"my_tuple = (10, 20)
+a, = my_tuple",buggy
+"my_tuple = (1, 2, 3)
+a, b = my_tuple",buggy
+"my_tuple = (1, 2, 3, 4)
+for item in my_tuple:
+print(item)",bug-free
+"my_tuple = ('a', 'b', 'c')
+for i in range(len(my_tuple)):
+print(my_tuple[i])",bug-free
+"my_tuple = (5, 10, 15)
+[print(x) for x in my_tuple]",bug-free
+"my_tuple = ()
+for item in my_tuple:
+print(item)",bug-free 
+"my_tuple = (1, 2, 3)
+while i < len(my_tuple):
+print(my_tuple[i])",buggy 
+"tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+joined = tuple1 + tuple2
+print(joined)",bug-free
+"tuple1 = ('a',)
+tuple2 = ('b', 'c')
+joined = tuple1 + tuple2
+print(joined)",bug-free
+"tuple1 = (10, 20)
+tuple2 = (30,)
+joined = (*tuple1, *tuple2)
+print(joined)",bug-free
+"tuple1 = (1, 2, 3)
+tuple2 = [4, 5, 6]
+joined = tuple1 + tuple2",buggy 
+"tuple1 = (1, 2)
+joined = tuple1 + 3",buggy
+"my_tuple = (1, 2, 3, 2, 4)
+my_tuple.count(2)",bug-free
+"my_tuple = ('a', 'b', 'a', 'c')
+my_tuple.count('a')",bug-free
+"my_tuple = (10, 20, 30, 40)
+my_tuple.index(30)",bug-free
+"my_tuple = ('x', 'y', 'z')
+my_tuple.index('y')",bug-free
+"my_tuple = (5, 10, 15)
+my_tuple.index(100)",buggy
+"my_tuple = (1, 2, 3)
+my_tuple.index()",buggy
+"my_tuple = (1, 2, 3)
+my_tuple.index(2, 0, 5)",bug-free
+"my_tuple = (1, 2, 3)
+my_tuple.index(2, 3, 5)",buggy
+"my_tuple = (1, 2, 3)
+my_tuple.count(5)",bug-free
+"my_tuple = ()
+my_tuple.count(0)",bug-free
+"my_tuple = (1, 2, 3)
+my_tuple.index(3)",bug-free
+"my_tuple = (1, 1, 1)
+my_tuple.count(1)",bug-free
+"my_tuple = (4, 5, 6)
+my_tuple.index(7)",buggy
+"my_tuple = (0, 1, 2)
+my_tuple.index(0)",bug-free
+"my_tuple = (1, 2, 3)
+my_tuple.index(2, -1)",buggy
+"my_tuple = (1, 2, 3)
+my_tuple.index(2, 1, 2)",bug-free
+"my_tuple = (1, 2, 3)
+my_tuple.count()",buggy
+"my_tuple = (1, 2, 3)
+my_tuple.index(3, 0, 2)",buggy
+"my_tuple = (3, 3, 3, 3)
+my_tuple.count(3)",bug-free
+"my_tuple = (1, 2, 3)
+my_tuple.index(1, 0, 1)",bug-free
+"my_tuple = (10, 20, 30)
+my_tuple.index(30, 0, 1)",buggy
+"my_tuple = (1, 2, 3)
+my_tuple.count(2, 1)",buggy
+"my_tuple = ('a', 'b', 'c')
+my_tuple.index('b')",bug-free
+"my_tuple = ('a', 'b', 'c')
+my_tuple.index('d')",buggy
+"my_tuple = (1,)
+my_tuple.index(1)",bug-free
+"my_tuple = ()
+my_tuple.index(1)",buggy
+"my_tuple = (1, 2, 3, 4, 5)
+my_tuple.index(5)",bug-free
+"my_tuple = (1, 2, 3, 4, 5)
+my_tuple.index(6)",buggy
+"my_tuple = (2, 4, 6, 8)
+my_tuple.count(4)",bug-free
+"my_tuple = (2, 4, 6, 8)
+my_tuple.index(8)",bug-free
+"my_set = {1, 2, 3}
+my_set.add(4)",bug-free
+"my_set = set()
+my_set.add(1)",bug-free
+"my_set = {1, 2, 3}
+my_set.remove(2)",bug-free
+"my_set = {1, 2, 3}
+my_set.remove(4)",buggy
+"my_set = {1, 2, 3}
+my_set.discard(3)",bug-free
+"my_set = {1, 2, 3}
+my_set.discard(5)",bug-free
+"my_set = {1, 2, 3}
+my_set.clear()",bug-free
+"my_set = {1, 2, 3}
+my_set.pop()",bug-free
+"my_set = set()
+my_set.pop()",buggy
+"set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+set1.union(set2)",bug-free
+"set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+set1.intersection(set2)",bug-free
+"set1 = {1, 2, 3}
+set2 = {4, 5, 6}
+set1.intersection(set2)",bug-free
+"set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+set1.difference(set2)",bug-free
+"set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+set1.symmetric_difference(set2)",bug-free
+"set1 = {1, 2, 3}
+set2 = {1, 2, 3}
+set1.isdisjoint(set2)",bug-free
+"set1 = {1, 2, 3}
+set2 = {4, 5, 6}
+set1.isdisjoint(set2)",bug-free
+"set1 = {1, 2, 3}
+set2 = {1, 2}
+set1.issuperset(set2)",bug-free
+"set1 = {1, 2}
+set2 = {1, 2, 3}
+set1.issubset(set2)",bug-free
+"my_set = {1, 2, 3}
+my_set.update(4)",buggy
+"my_set = {1, 2, 3}
+my_set.update([4, 5])",bug-free
+"my_set = {1, 2, 3}
+my_set.add([4, 5])",buggy
+"my_set = {1, 2, 3}
+my_set.add((4, 5))",bug-free
+"my_set = {1, 2, 3}
+len(my_set)",bug-free
+"my_set = {1, 2, 3}
+4 in my_set",bug-free
+"my_set = {1, 2, 3}
+my_set.remove(2.0)",bug-free
+"my_set = {}
+my_set.add(1)",buggy
+"my_set = set()
+my_set.update(1, 2, 3)",buggy
+"my_set = set()
+my_set.update([1, 2, 3])",bug-free
+"my_set = {1, 2, 3}
+my_set.pop(1)",buggy
+"my_set = {1, 2, 3}
+my_set.symmetric_difference_update({3, 4})",bug-free
+"my_set = {1, 2, 3}
+for item in my_set:
+print(item)",bug-free
+"my_set = {1, 2, 3}
+print(2 in my_set)",bug-free
+"my_set = {1, 2, 3}
+print(4 in my_set)",bug-free
+"my_set = {1, 2, 3}
+print(my_set[0])",buggy
+"my_set = {1, 2, 3}
+list_set = list(my_set)
+print(list_set[0])",bug-free
+"my_set = {1, 2, 3}
+element = next(iter(my_set))
+print(element)",bug-free
+"my_set = {1, 2, 3}
+print(my_set.get(1))",buggy
+"my_set = {1, 2, 3}
+for i, item in enumerate(my_set):
+print(i, item)",bug-free
+"my_set = {}
+print(my_set[0])",buggy
+"my_set = set()
+print(len(my_set))",bug-free
+"my_set = {1, 2, 3}
+print(my_set.pop())",bug-free
+"my_set = set()
+print(my_set.pop())",buggy
+"my_set = {1, 2, 3}
+for item in sorted(my_set):
+print(item)",bug-free
+"my_set = {1, 2, 3}
+item = my_set[1]",buggy
+"my_set = {1, 2, 3}
+for item in reversed(list(my_set)):
+print(item)",bug-free
+"my_set = {1, 2, 3}
+print(my_set.index(2))",buggy
+"my_set = {1, 2, 3}
+print(2 not in my_set)",bug-free
+"my_set = {1, 2, 3}
+for item in my_set:
+if item == 2:
+print(""Found 2"")",bug-free
+"my_set = {1, 2, 3}
+item = my_set[::2]",buggy
+"my_set = {1, 2, 3}
+my_set.remove(2)
+print(my_set)",bug-free
+"my_set = {1, 2, 3}
+my_set.remove(5)",buggy
+"my_set = {1, 2, 3}
+my_set.discard(2)
+print(my_set)",bug-free
+"my_set = {1, 2, 3}
+my_set.discard(5)
+print(my_set)",bug-free
+"my_set = {1, 2, 3}
+removed_item = my_set.pop()
+print(removed_item)",bug-free
+"my_set = set()
+my_set.pop()",buggy
+"my_set = {1, 2, 3}
+my_set.clear()
+print(my_set)",bug-free
+"my_set = {1, 2, 3}
+my_set.remove()",buggy
+"my_set = {1, 2, 3}
+if 2 in my_set:
+my_set.remove(2)
+print(my_set)",bug-free
+"my_set = {1, 2, 3}
+my_set.discard(4)",bug-free
+"my_set = {1, 2, 3}
+my_set.pop(1)",buggy
+"my_set = {1, 2, 3}
+my_set = my_set - {2}
+print(my_set)",bug-free
+"my_set = {1, 2, 3}
+my_set -= {2}
+print(my_set)",bug-free
+"my_set = {1, 2, 3}
+my_set -= {4}",bug-free
+"my_set = {1, 2, 3}
+del my_set[1]",buggy
+"my_set = {1, 2, 3}
+my_set.difference_update({2, 3})
+print(my_set)",bug-free
+"my_set = {1, 2, 3}
+my_set.difference_update(5)",buggy
+"my_set = {1, 2, 3}
+new_set = my_set - {1, 3}
+print(new_set)",bug-free
+"my_set = {1, 2, 3}
+my_set.pop(2)",buggy
+"my_set = {1, 2, 3}
+my_set.clear
+print(my_set)",buggy
+"my_set = {1, 2, 3}
+for item in my_set:
+print(item)",bug-free
+"my_set = {1, 2, 3}
+for item in my_set
+print(item)",buggy
+"my_set = {""apple"", ""banana"", ""cherry""}
+for fruit in my_set:
+print(fruit)",bug-free
+"my_set = {""apple"", ""banana"", ""cherry""}
+for fruit in my_set:
+print(fruit)",buggy
+"my_set = set()
+for item in my_set:
+print(item)",bug-free
+"my_set = {1, 2, 3}
+for item in my_set:
+if item == 2:
+break
+print(item)",bug-free
+"my_set = {1, 2, 3}
+for item in my_set:
+if item = 2:
+break",buggy
+"my_set = {1, 2, 3}
+i = 0
+while i < len(my_set):
+print(list(my_set)[i])
+i += 1",bug-free
+"my_set = {1, 2, 3}
+i = 0
+while i <= len(my_set):
+print(list(my_set)[i])
+i += 1",buggy
+"my_set = {1, 2, 3}
+for idx, val in enumerate(my_set):
+print(idx, val)",bug-free
+"my_set = {1, 2, 3}
+for idx, val in enumerate(my_set):
+print(idx val)",buggy
+"my_set = {1, 2, 3}
+for item in sorted(my_set):
+print(item)",bug-free
+"my_set = {1, 2, 3}
+for item in my_set:
+print(item",buggy
+"my_set = {1, 2, 3}
+[print(item) for item in my_set]",bug-free
+"my_set = {1, 2, 3}
+[print(item for item in my_set]",buggy
+"my_set = {""a"", ""b"", ""c""}
+for char in my_set:
+print(f""Character: {char}"")",bug-free
+"my_set = {""a"", ""b"", ""c""}
+for char in my_set:
+print(""Character: "" char)",buggy
+"my_set = {1, 2, 3}
+for i in range(len(my_set)):
+print(list(my_set)[i])",bug-free
+"my_set = {1, 2, 3}
+for i in range(my_set):
+print(list(my_set)[i])",buggy
+"my_set = {}
+for item in my_set:
+print(item)",buggy
+"set1 = {1, 2, 3}
+set2 = {4, 5, 6}
+joined_set = set1.union(set2)
+print(joined_set)",bug-free
+"set1 = {1, 2, 3}
+set2 = {4, 5, 6}
+joined_set = set1 union set2
+print(joined_set)",buggy
+"set1 = {""a"", ""b"", ""c""}
+set2 = {""d"", ""e"", ""f""}
+set1.update(set2)
+print(set1)",bug-free
+"set1 = {""a"", ""b"", ""c""}
+set2 = {""d"", ""e"", ""f""}
+set1.update set2
+print(set1)",buggy
+"set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+`joined_set = set1",set2<br>print(joined_set)`
+"set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+joined_set = set1 or set2
+print(joined_set)",buggy
+"set1 = {""apple"", ""banana""}
+set2 = {""cherry"", ""date""}
+joined_set = set1.intersection(set2)
+print(joined_set)",bug-free
+"set1 = {""apple"", ""banana""}
+set2 = {""cherry"", ""date""}
+joined_set = set1.intersect(set2)
+print(joined_set)",buggy
+"set1 = {1, 2}
+set2 = {3, 4}
+set3 = {5, 6}
+result = set1.union(set2, set3)
+print(result)",bug-free
+"set1 = {1, 2}
+set2 = {3, 4}
+set3 = {5, 6}
+result = set1.union(set2 set3)
+print(result)",buggy
+"set1 = {1, 2, 3}
+set2 = {2, 3, 4}
+common_elements = set1 & set2
+print(common_elements)",bug-free
+"set1 = {1, 2, 3}
+set2 = {2, 3, 4}
+common_elements = set1 && set2
+print(common_elements)",buggy
+"set1 = {1, 2, 3}
+set2 = {4, 5, 6}
+disjoint = set1.isdisjoint(set2)
+print(disjoint)",bug-free
+"set1 = {1, 2, 3}
+set2 = {4, 5, 6}
+disjoint = set1.isdisjoint set2
+print(disjoint)",buggy
+"set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+difference = set1.difference(set2)
+print(difference)",bug-free
+"set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+difference = set1.diff(set2)
+print(difference)",buggy
+"my_set = {1, 2, 3}
+my_set.add(4)
+print(my_set)",bug-free
+"my_set = {1, 2, 3}
+my_set.add 4
+print(my_set)",buggy
+"my_set = {1, 2, 3}
+my_set.remove(2)
+print(my_set)",bug-free
+"my_set = {1, 2, 3}
+my_set.remove(5)
+print(my_set)",buggy
+"my_set = {1, 2, 3}
+my_set.discard(2)
+print(my_set)",bug-free
+"my_set = {1, 2, 3}
+my_set.discard(5)
+print(my_set)",bug-free
+"my_set = {1, 2, 3}
+popped_item = my_set.pop()
+print(popped_item)",bug-free
+"my_set = {}
+popped_item = my_set.pop()
+print(popped_item)",buggy
+"my_set = {1, 2, 3}
+my_set.clear()
+print(my_set)",bug-free
+"my_set = {1, 2, 3}
+my_set.clear
+print(my_set)",buggy
+"set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+union_set = set1.union(set2)
+print(union_set)",bug-free
+"set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+union_set = set1.union set2
+print(union_set)",buggy
+"set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+intersection_set = set1.intersection(set2)
+print(intersection_set)",bug-free
+"set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+intersection_set = set1.intersect(set2)
+print(intersection_set)",buggy
+"set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+diff_set = set1.difference(set2)
+print(diff_set)",bug-free
+"set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+diff_set = set1.diff(set2)
+print(diff_set)",buggy
+"set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+symmetric_diff = set1.symmetric_difference(set2)
+print(symmetric_diff)",bug-free
+"set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+symmetric_diff = set1.symmetricDiff(set2)
+print(symmetric_diff)",buggy
+"set1 = {1, 2}
+set2 = {1, 2, 3}
+is_subset = set1.issubset(set2)
+print(is_subset)",bug-free
+"set1 = {1, 2}
+set2 = {1, 2, 3}
+is_subset = set1.subset(set2)
+print(is_subset)",buggy
+"set1 = {1, 2, 3}
+set2 = {1, 2}
+is_superset = set1.issuperset(set2)
+print(is_superset)",bug-free
+"set1 = {1, 2, 3}
+set2 = {1, 2}
+is_superset = set1.superset(set2)
+print(is_superset)",buggy
+"my_dict = {""name"": ""Alice"", ""age"": 25}
+print(my_dict)",bug-free
+"my_dict = {""name"": ""Alice"" ""age"": 25}
+print(my_dict)",buggy
+"my_dict = {""name"": ""Bob"", ""age"": 30}
+print(my_dict[""age""])",bug-free
+"my_dict = {""name"": ""Bob"", ""age"": 30}
+print(my_dict[""gender""])",buggy
+"my_dict = {""name"": ""Eve"", ""city"": ""Paris""}
+my_dict[""country""] = ""France""
+print(my_dict)",bug-free
+"my_dict = {""name"": ""Eve"", ""city"": ""Paris""}
+my_dict[""country""] == ""France""
+print(my_dict)",buggy
+"my_dict = {""brand"": ""Ford"", ""model"": ""Mustang""}
+my_dict.update({""year"": 1964})
+print(my_dict)",bug-free
+"my_dict = {""brand"": ""Ford"", ""model"": ""Mustang""}
+my_dict.update ""year"": 1964
+print(my_dict)",buggy
+"my_dict = {""a"": 1, ""b"": 2, ""c"": 3}
+removed = my_dict.pop(""b"")
+print(my_dict)",bug-free
+"my_dict = {""a"": 1, ""b"": 2, ""c"": 3}
+removed = my_dict.pop(""d"")
+print(my_dict)",buggy
+"my_dict = {""x"": 10, ""y"": 20}
+my_dict.clear()
+print(my_dict)",bug-free
+"my_dict = {""x"": 10, ""y"": 20}
+my_dict.clear
+print(my_dict)",buggy
+"my_dict = {""fruit"": ""apple"", ""color"": ""red""}
+for key in my_dict:
+    print(key)",bug-free
+"my_dict = {""fruit"": ""apple"", ""color"": ""red""}
+for key in my_dict
+    print(key)",buggy
+"my_dict = {""fruit"": ""apple"", ""color"": ""red""}
+for value in my_dict.values():
+    print(value)",bug-free
+"my_dict = {""fruit"": ""apple"", ""color"": ""red""}
+for value in my_dict.value():
+    print(value)",buggy
+"my_dict = {""a"": 1, ""b"": 2}
+if ""b"" in my_dict:
+    print(""Key found!"")",bug-free
+"my_dict = {""a"": 1, ""b"": 2}
+if ""c"" on my_dict:
+    print(""Key found!"")",buggy
+"dict1 = {""name"": ""Tom""}
+dict2 = {""age"": 25}
+combined = {**dict1, **dict2}
+print(combined)",bug-free
+"dict1 = {""name"": ""Tom""}
+dict2 = {""age"": 25}
+combined = dict1 + dict2
+print(combined)",buggy
+"my_dict = {""name"": ""Alice"", ""age"": 25}
+my_dict[""age""] = 26
+print(my_dict)",bug-free
+"my_dict = {""name"": ""Alice"", ""age"": 25}
+my_dict[""age""] == 26
+print(my_dict)",buggy
+"my_dict = {""brand"": ""Ford"", ""model"": ""Mustang""}
+my_dict[""model""] = ""F-150""
+print(my_dict)",bug-free
+"my_dict = {""brand"": ""Ford"", ""model"": ""Mustang""}
+my_dict(""model"") = ""F-150""
+print(my_dict)",buggy
+"my_dict = {""fruit"": ""apple"", ""color"": ""red""}
+my_dict.update({""color"": ""green""})
+print(my_dict)",bug-free
+"my_dict = {""fruit"": ""apple"", ""color"": ""red""}
+my_dict.update[""color""] = ""green""
+print(my_dict)",buggy
+"person = {""name"": ""John"", ""age"": 30}
+if ""age"" in person:
+    person[""age""] = 31
+print(person)",bug-free
+"person = {""name"": ""John"", ""age"": 30}
+if ""age"" on person:
+    person[""age""] = 31
+print(person)",buggy
+"inventory = {""apple"": 10, ""banana"": 5}
+inventory[""apple""] += 5
+print(inventory)",bug-free
+"inventory = {""apple"": 10, ""banana"": 5}
+inventory[""orange""] += 2
+print(inventory)",buggy
+"my_dict = {""a"": 1, ""b"": 2}
+my_dict.update(c=3)
+print(my_dict)",bug-free
+"my_dict = {""a"": 1, ""b"": 2}
+my_dict.update[""c""] = 3
+print(my_dict)",buggy
+"settings = {""volume"": 50, ""brightness"": 70}
+settings[""volume""] = settings.get(""volume"", 0) + 10
+print(settings)",bug-free
+"settings = {""volume"": 50, ""brightness"": 70}
+settings[""contrast""] += 10
+print(settings)",buggy
+"data = {""key1"": ""value1"", ""key2"": ""value2""}
+data[""key3""] = ""value3""
+print(data)",bug-free
+"data = {""key1"": ""value1"", ""key2"": ""value2""}
+data[""key3""] == ""value3""
+print(data)",buggy
+"my_dict = {""name"": ""Alice""}
+my_dict[""age""] = 25
+print(my_dict)",bug-free
+"my_dict = {""name"": ""Alice""}
+my_dict[""age""] == 25
+print(my_dict)",buggy
+"car = {""brand"": ""Ford""}
+car[""model""] = ""Mustang""
+car[""year""] = 1964
+print(car)",bug-free
+"car = {""brand"": ""Ford""}
+car(""model"") = ""Mustang""
+print(car)",buggy
+"person = {}
+person[""name""] = ""Bob""
+person[""city""] = ""New York""
+print(person)",bug-free
+"person = {}
+person.name = ""Bob""
+person.city = ""New York""
+print(person)",buggy
+"inventory = {""apple"": 10}
+inventory[""banana""] = 5
+inventory[""orange""] = 7
+print(inventory)",bug-free
+"inventory = {""apple"": 10}
+inventory.banana = 5
+inventory.orange = 7
+print(inventory)",buggy
+"settings = {}
+settings.update({""volume"": 50, ""brightness"": 70})
+print(settings)",bug-free
+"settings = {}
+settings.update[""volume""] = 50
+print(settings)",buggy
+"my_dict = {}
+new_items = {""a"": 1, ""b"": 2}
+my_dict.update(new_items)
+print(my_dict)",bug-free
+"my_dict = {}
+new_items = {""a"": 1, ""b"": 2}
+my_dict.update(new_items)
+print(my_dict",buggy
+"data = {}
+data[""key1""] = ""value1""
+data[""key2""] = ""value2""
+print(data)",bug-free
+"data = {}
+data[""key1""] = ""value1""
+data[""key2""] == ""value2""
+print(data)",buggy
+"profile = {""username"": ""admin""}
+profile[""email""] = ""admin@example.com""
+print(profile)",bug-free
+"profile = {""username"": ""admin""}
+profile(""email"") = ""admin@example.com""
+print(profile)",buggy
+"my_dict = {""name"": ""Alice"", ""age"": 25}
+del my_dict[""age""]
+print(my_dict)",bug-free
+"my_dict = {""name"": ""Alice"", ""age"": 25}
+del my_dict[""gender""]
+print(my_dict)",buggy
+"car = {""brand"": ""Ford"", ""model"": ""Mustang"", ""year"": 1964}
+car.pop(""year"")
+print(car)",bug-free
+"car = {""brand"": ""Ford"", ""model"": ""Mustang"", ""year"": 1964}
+car.pop(""color"")
+print(car)",buggy
+"person = {""name"": ""Bob"", ""city"": ""New York""}
+person.clear()
+print(person)",bug-free
+"person = {""name"": ""Bob"", ""city"": ""New York""}
+person.clear
+print(person)",buggy
+"inventory = {""apple"": 10, ""banana"": 5, ""orange"": 7}
+removed = inventory.pop(""banana"")
+print(inventory)",bug-free
+"inventory = {""apple"": 10, ""banana"": 5, ""orange"": 7}
+removed = inventory.pop(""grape"")
+print(inventory)",buggy
+"settings = {""volume"": 50, ""brightness"": 70}
+del settings[""volume""]
+print(settings)",bug-free
+"settings = {""volume"": 50, ""brightness"": 70}
+del settings[""contrast""]
+print(settings)",buggy
+"data = {""a"": 1, ""b"": 2, ""c"": 3}
+data.popitem()
+print(data)",bug-free
+"data = {}
+data.popitem()
+print(data)",buggy
+"profile = {""username"": ""admin"", ""email"": ""admin@example.com""}
+del profile[""email""]
+print(profile)",bug-free
+"profile = {""username"": ""admin"", ""email"": ""admin@example.com""}
+del profile[""password""]
+print(profile)",buggy
+"student = {""name"": ""John"", ""grade"": ""A""}
+student.pop(""grade"")
+print(student)",bug-free
+"student = {""name"": ""John"", ""grade"": ""A""}
+student.remove(""grade"")
+print(student)",buggy
+"person = {""name"": ""Alice"", ""age"": 25, ""city"": ""New York""}
+for key in person:
+    print(key)",bug-free
+"person = {""name"": ""Alice"", ""age"": 25, ""city"": ""New York""}
+for k in persons:
+    print(k)",buggy
+"car = {""brand"": ""Ford"", ""model"": ""Mustang"", ""year"": 1964}
+for key, value in car.items():
+    print(key, value)",bug-free
+"car = {""brand"": ""Ford"", ""model"": ""Mustang"", ""year"": 1964}
+for key, value in car.item():
+    print(key, value)",buggy
+"student = {""name"": ""Bob"", ""grade"": ""A"", ""subject"": ""Math""}
+for value in student.values():
+    print(value)",bug-free
+"student = {""name"": ""Bob"", ""grade"": ""A"", ""subject"": ""Math""}
+for value in student.value():
+    print(value)",buggy
+"inventory = {""apple"": 10, ""banana"": 5, ""orange"": 7}
+for item in inventory:
+    print(f""{item}: {inventory[item]}"")",bug-free
+"inventory = {""apple"": 10, ""banana"": 5, ""orange"": 7}
+for item in inventory:
+    print(f""{item}: {inventory.item}"")",buggy
+"profile = {""username"": ""admin"", ""email"": ""admin@example.com""}
+for key in profile.keys():
+    print(key)",bug-free
+"profile = {""username"": ""admin"", ""email"": ""admin@example.com""}
+for key in profile.key():
+    print(key)",buggy
+"data = {""a"": 1, ""b"": 2, ""c"": 3}
+for k, v in data.items():
+    if v % 2 == 0:
+        print(k)",bug-free
+"data = {""a"": 1, ""b"": 2, ""c"": 3}
+for k, v in data.item():
+    if v % 2 == 0:
+        print(k)",buggy
+"settings = {""volume"": 50, ""brightness"": 70}
+for setting in settings:
+    print(setting)",bug-free
+"settings = {""volume"": 50, ""brightness"": 70}
+for setting in setting:
+    print(setting)",buggy
+"dict1 = {""a"": 1, ""b"": 2, ""c"": 3} 
+dict2 = dict1.copy() 
+print(dict2)",bug-free
+"dict1 = {""a"": 1, ""b"": 2, ""c"": 3} 
+dict2 = dict1 
+dict2[""a""] = 10 
+print(dict1)",buggy
+"dict1 = {""a"": 1, ""b"": 2, ""c"": 3} 
+dict2 = {} 
+for key, value in dict1.items(): 
+    dict2[key] = value 
+print(dict2)",bug-free
+"dict1 = {""a"": 1, ""b"": 2, ""c"": 3} 
+dict2 = dict(dict1) 
+print(dict2)",bug-free
+"dict1 = {""a"": 1, ""b"": 2, ""c"": 3} 
+dict2 = {**dict1} 
+print(dict2)",bug-free
+"dict1 = {""a"": , ""b"": 2} 
+dict2 = dict1.copy() 
+dict2[""a""].append(3) 
+print(dict1)",buggy
+"import copy 
+dict1 = {""a"": , ""b"": 2} 
+dict2 = copy.deepcopy(dict1) 
+dict2[""a""].append(3) 
+print(dict1)",bug-free
+"import copy 
+dict1 = {""a"": , ""b"": 2} 
+dict2 = copy.copy(dict1) 
+dict2[""a""].append(3) 
+print(dict1)",buggy
+"dict1 = {""a"": 1, ""b"": 2} 
+dict2 = dict1.fromkeys(dict1) 
+print(dict2)",buggy
+"dict1 = {""a"": 1, ""b"": 2} 
+dict2 = {key: dict1[key] for key in dict1} 
+print(dict2)",bug-free
+"dict1 = {""a"": 1, ""b"": 2} 
+dict2 = {} 
+dict2.update(dict1) 
+print(dict2)",bug-free
+"dict1 = {""a"": 1, ""b"": 2} 
+dict2 = dict1.clear() 
+print(dict2)",buggy
+"dict1 = {""a"": 1, ""b"": 2} 
+dict2 = dict1.values() 
+print(dict2)",buggy
+"dict1 = {""a"": 1, ""b"": 2} 
+dict2 = {}.fromkeys(dict1, dict1) 
+print(dict2)",buggy
+"dict1 = {""a"": 1, ""b"": 2} 
+dict2 = dict1.setdefault(""c"", 3) 
+print(dict2)",buggy
+"dict1 = {""a"": 1, ""b"": 2} 
+dict2 = dict1.copy() 
+print(dict2)",bug-free
+"import copy 
+dict1 = {""a"": 1, ""b"": 2} 
+dict2 = copy.deepcopy(dict1, {}) 
+print(dict2)",bug-free
+"dict1 = {""a"": , ""b"": 2} 
+dict2 = dict1.deepcopy({}) 
+print(dict2)",buggy
