@@ -4,6 +4,7 @@ It uses the hugging face api, wandb tool, and some nice machine learning algos [
 
 I have scraped the data from the github api scraped the data from that.
 
+for felix-detect-fix extension please go to **https://github.com/felixoder/felix-detect-fix**
 
 
 @author[Debayan Ghosh]
