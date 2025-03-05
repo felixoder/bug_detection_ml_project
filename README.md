@@ -11,7 +11,7 @@ and I also have a nice vs code extension [felix-detect-fix] for that
 - 🚀 **Detect Bugs**: Classifies code as "buggy" or "bug-free."
 - 🔧 **Fix Bugs**: Automatically suggests fixes for detected issues.
 
-- VIEW **https://github.com/felixoder/felix-detect-fix** to see my extension or you can use it on 
+- VIEW **https://github.com/felixoder/felix-detect-fix** to see my extension or you can use it on
 
 **https://marketplace.visualstudio.com/items?itemName=DebayanGhosh.felix-detect-fix**
 
@@ -19,10 +19,11 @@ and I also have a nice vs code extension [felix-detect-fix] for that
 
 - Use google colab if you dont have a local setup. and run the .ipynb files to see / inspect the model generation
 - The github_scraped_half.csv is a csv file that consists the scraped data
-- The Data_Scraper_github.ipynb scrapes the data from gh [give your ACCESS_TOKEN there] 
-- The bug_detection.ipynb detects the bugs 
+- The Data_Scraper_github.ipynb scrapes the data from gh [give your ACCESS_TOKEN there]
+- The bug_detection.ipynb detects the bugs
 - bug_Fixing.ipynb fixes the bugs
 - Bug_Detection_Documentation.pdf Theoritical Docs
+
 ```
 
 ## Requirements 📦
@@ -44,3 +45,4 @@ This project is licensed under the MIT License.
 
 Made with ❤️ by [Debayan Ghosh](https://github.com/felixoder).
 
+```
