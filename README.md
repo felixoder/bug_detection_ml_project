@@ -54,8 +54,8 @@ Open the extension tab in your VS code and find this [felix-detect-fix](https://
 Here are some useful documentation links:
 - Getting started guide:  index.html
 - VS code extension library: https://marketplace.visualstudio.com/items?itemName=DebayanGhosh.felix-detect-fix
-- Mixture graph examples: https://alelievr.github.io/Mixture/manual/Examples.html
-- Known issues: https://alelievr.github.io/Mixture/manual/KnownIssues.html
+
+
 
 ## Evaluation
 
@@ -74,11 +74,7 @@ F1 Score: 0.75
 ![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/t4.png?raw=true)
 ![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/t5.png?raw=true)
 
-# Community 
 
-## Discord
-
-Join the [Mixture Discord](https://discord.gg/DGxZRP3qeg)! 
 
 ## Feedback
 
@@ -96,13 +92,13 @@ In case you have any questions about a feature you want to develop of something 
 # Gallery / Cool things
 
 You can install the extension and detect the bug like
-![](https://github.com/felixoder/bug_detection_ml_project/blob/master/image/d1.gif?raw=true)
+![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/d1.gif?raw=true)
 
 And fix the bug like
-![](https://github.com/felixoder/bug_detection_ml_project/blob/master/image/d2.gif?raw=true) 
+![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/d2.gif?raw=true) 
 
 Use the model in google colab like this 
-![](https://github.com/felixoder/bug_detection_ml_project/blob/master/image/d3.gif?raw=true) 
+![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/d3.gif?raw=true) 
 
 
 
