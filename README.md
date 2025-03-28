@@ -72,7 +72,7 @@ F1 Score: 0.75
 
 - see how it is working on Windows
 
-![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/e5.png?raw=true)
+![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/e6.png?raw=true)
 
 ## Feedback
 
