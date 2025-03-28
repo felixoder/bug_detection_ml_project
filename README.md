@@ -3,7 +3,6 @@
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://github.com/felixoder/bug_detection_ml_project/blob/master/LICENSE)
 [![Documentation](https://img.shields.io/badge/Documentation-github-brightgreen.svg?style=for-the-badge)](xyz.html)
 
-
 This project is a powerful fine tune model crafted in google colab to detect and fix all kinds of bugs of a python code in realtime. This is integrated in a VS code extenstion through [felix-detect-fix](https://github.com/felixoder/felix-detect-fix). It's fast with it's GPU/CPU based workflow and compatible with all the Operating System. thanks to the new [codebert-base](microsoft/codebert-base) model and [deepseek](deepseek-ai/deepseek-coder-1.3b-instruct).
 
 ![](https://github.com/felixoder/bug_detection_ml_project/blob/master/demo_running.png?raw=true)
@@ -18,11 +17,9 @@ If you want to use this model locally then you should have installed python 3+ o
 
 The both bug detecting and fixing model is available on the [Huggingface-bug-detection](https://huggingface.co/felixoder/bug_detector_model) and [Huggingface-bug-fixing](https://huggingface.co/felixoder/bug_fixer_model) if you want to install them you are good to go.
 
-
 1. Open the `usingModel.ipynb` and test this model.
 2. Check the accuracy score, F1, Precesion and other metrics for better understanding.
 3. Next, Check for the graphical section to understand confusion matrix, box-plot, histogram etc.
-
 
 </details>
 
@@ -35,7 +32,6 @@ https://github.com/felixoder/felix-detect-fix
 
 Open the extension tab in your VS code and find this [felix-detect-fix](https://marketplace.visualstudio.com/items?itemName=DebayanGhosh.felix-detect-fix) and install this.
 
-
 1. Now create a python file having extension of `.ipynb`.
 2. Write some code and press `Ctrl/cmd + shift + p` and type `Detect Bug`. after running this wait for couple of second and if there is a bug you can see a pop up and if you want to click `Fix Bug`.
 3. Next, Click the `Fix Bug` [you can do this either by running the `Ctrl/cmd + shift + p` and type `Detect Bug` or the steps in step 2 and do fix likewise]
@@ -46,22 +42,20 @@ Open the extension tab in your VS code and find this [felix-detect-fix](https://
 ![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/e4.png?raw=true)
 ![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/e5.png?raw=true)
 
-
 </details>
 
 ## Documentation
 
 Here are some useful documentation links:
-- Getting started guide:  index.html
+
+- Getting started guide: index.html
 - VS code extension library: https://marketplace.visualstudio.com/items?itemName=DebayanGhosh.felix-detect-fix
-
-
 
 ## Evaluation
 
-we have evaluated the evaluation matrics of the fine tune model please check the following graphs 
+we have evaluated the evaluation matrics of the fine tune model please check the following graphs
 
-and from the evaluation matrics our scores are follows - 
+and from the evaluation matrics our scores are follows -
 
 Accuracy: 80.00%
 Precision: 1.00
@@ -74,7 +68,11 @@ F1 Score: 0.75
 ![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/t4.png?raw=true)
 ![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/t5.png?raw=true)
 
+## Cross Platform
 
+- see how it is working on Windows
+
+![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/e5.png?raw=true)
 
 ## Feedback
 
@@ -82,7 +80,7 @@ To give feedback, ask a question or make a feature request, you can either use t
 
 Bugs are logged using the github issue system. To report a bug, simply [open a new issue](https://github.com/felixoder/bug_detection_ml_project/issues/new/choose).
 
-## Contributions 
+## Contributions
 
 All contributions are welcomed.
 
@@ -95,19 +93,16 @@ You can install the extension and detect the bug like
 ![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/d1.gif?raw=true)
 
 And fix the bug like
-![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/d2.gif?raw=true) 
+![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/d2.gif?raw=true)
 
-Use the model in google colab like this 
-![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/d3.gif?raw=true) 
+Use the model in google colab like this
+![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/d3.gif?raw=true)
 
-
-
-
-
-![full video how to use the model in vs code](https://github.com/felixoder/bug_detection_ml_project/blob/master/image/full.mp4?raw=true) 
+![full video how to use the model in vs code](https://github.com/felixoder/bug_detection_ml_project/blob/master/image/full.mp4?raw=true)
 
 @source - The idea and the project is done from my industrial training of Intel Unnati where I am selected among 50 students in my college.
 
-## Developer 
+## Developer
+
 Debayan Ghosh @felixoder
 uni student code - BWU/BTA/22/157
