@@ -98,7 +98,7 @@ And fix the bug like
 Use the model in google colab like this
 ![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/d3.gif?raw=true)
 
-![full video how to use the model in vs code](https://github.com/felixoder/bug_detection_ml_project/blob/master/image/full.mp4?raw=true)
+![full video how to use the model in vs code](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/full.mp4?raw=true)
 
 @source - The idea and the project is done from my industrial training of Intel Unnati where I am selected among 50 students in my college.
 
