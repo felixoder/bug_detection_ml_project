@@ -1,7 +1,7 @@
 ![](https://github.com/felixoder/bug_detection_ml_project/blob/master/logo.png?raw=true)
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://github.com/felixoder/bug_detection_ml_project/blob/master/LICENSE)
-[![Documentation](https://img.shields.io/badge/Documentation-github-brightgreen.svg?style=for-the-badge)](xyz.html)
+[![Documentation](https://img.shields.io/badge/Documentation-github-brightgreen.svg?style=for-the-badge)](https://usefelix.vercel.app/)
 
 This project is a powerful fine tune model crafted in google colab to detect and fix all kinds of bugs of a python code in realtime. This is integrated in a VS code extenstion through [felix-detect-fix](https://github.com/felixoder/felix-detect-fix). It's fast with it's GPU/CPU based workflow and compatible with all the Operating System. thanks to the new [codebert-base](microsoft/codebert-base) model and [deepseek](deepseek-ai/deepseek-coder-1.3b-instruct).
 
@@ -48,7 +48,7 @@ Open the extension tab in your VS code and find this [felix-detect-fix](https://
 
 Here are some useful documentation links:
 
-- Getting started guide: index.html
+- Getting started guide: ![](https://usefelix.vercel.app)
 - VS code extension library: https://marketplace.visualstudio.com/items?itemName=DebayanGhosh.felix-detect-fix
 
 ## Evaluation
@@ -84,7 +84,7 @@ Bugs are logged using the github issue system. To report a bug, simply [open a n
 
 All contributions are welcomed.
 
-For new nodes, check out [this documentation page on how to create a new shader-based node](index.html). Once you have it working, prepare a pull request against this repository.  
+For new nodes, check out [this documentation page on how to create a new shader-based node](https://usefelix.vercel.app/). Once you have it working, prepare a pull request against this repository.  
 In case you have any questions about a feature you want to develop of something you're not sure how to do, you can still create a draft pull request to discuss the implementation details.
 
 # Gallery / Cool things
@@ -99,6 +99,9 @@ Use the model in google colab like this
 ![](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/d3.gif?raw=true)
 
 ![full video how to use the model in vs code](https://github.com/felixoder/bug_detection_ml_project/blob/master/images/full.mp4?raw=true)
+
+Please check out my documentation page
+![](https://usefelix.vercel.app)
 
 @source - The idea and the project is done from my industrial training of Intel Unnati where I am selected among 50 students in my college.
 
